@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: produit immobilier
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true

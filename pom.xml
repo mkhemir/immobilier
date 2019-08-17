@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.immoapp.mss</groupId>
+    <artifactId>immoApp</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+
+    <name>immoapp-parent-pom</name>
+    <description>Parent Pom for the immoapp project</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.4.RELEASE</version>
+    </parent>
+    <modules>
+        <module>optimisation-fiscale-service</module>
+        <module>confsvr</module>
+        <module>eurekasvr</module>
+        <module>produit-immobilier-service</module>
+
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.10</version>
+                <configuration>
+                    <baseImage>java</baseImage>
+                    <imageName>khemir</imageName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <fork>true</fork>
+                    <executable>C:/Program Files/Java/jdk1.8.0_161/bin/javac</executable>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
