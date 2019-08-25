@@ -6,11 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="audit" />
         <module name="confsvr" />
         <module name="eurekasvr" />
+        <module name="gate" />
         <module name="optimisation-fiscale-service" />
         <module name="produit-immobilier-service" />
+        <module name="specialroutesservice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auditservice" target="1.8" />
+      <module name="gateservice" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

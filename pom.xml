@@ -23,6 +23,9 @@
         <module>confsvr</module>
         <module>eurekasvr</module>
         <module>produit-immobilier-service</module>
+        <module>gate-service</module>
+        <module>audit-service</module>
+        <module>specialroutes-service</module>
 
     </modules>
     <build>
