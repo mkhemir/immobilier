@@ -8,7 +8,7 @@
     <packaging>jar</packaging>
 
     <name>Audit Service</name>
-    <description>Audit Service</description>
+    <description>auditservice</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -140,6 +140,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <fork>true</fork>
+                    <executable>C:/Program Files/Java/jdk1.8.0_161/bin/javac</executable>
+                </configuration>
             </plugin>
         </plugins>
     </build>

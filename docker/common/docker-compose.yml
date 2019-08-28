@@ -10,7 +10,7 @@ services:
       - "8888:8888"
     environment:
       EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT: 8761
+      EUREKASERVER_PORT: "8761"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   gateservice:
     image: immoapp/immo-gate:taxes
@@ -24,7 +24,7 @@ services:
       EUREKASERVER_PORT:        "8761"
       DATABASESERVER_PORT:      "5432"
       CONFIGSERVER_PORT:        "8888"
-      ORGSERVERNEW_PORT:        "8087"
+      AUDIT_PORT:               "8087"
   database:
     image: postgres:9.5
     ports:
@@ -45,7 +45,7 @@ services:
       EUREKASERVER_PORT:        "8761"
       DATABASESERVER_PORT:      "5432"
       CONFIGSERVER_PORT:        "8888"
-      ORGSERVERNEW_PORT:        "8087"
+      AUDIT_PORT:               "8087"
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   produitimmobilierservice:
@@ -60,22 +60,22 @@ services:
       EUREKASERVER_PORT:        "8761"
       DATABASESERVER_PORT:      "5432"
       CONFIGSERVER_PORT:        "8888"
-      ORGSERVERNEW_PORT:        "8087"
+      AUDIT_PORT:               "8087"
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   auditservice:
     image: immoapp/audit-service:taxes
     ports:
-      - "9191:9191"
+      - "8087:8087"
     environment:
       PROFILE: "default"
-      SERVER_PORT: "8085"
+      SERVER_PORT: "8087"
       CONFIGSERVER_URI: "http://configserver:8888"
       EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
       EUREKASERVER_PORT:        "8761"
       DATABASESERVER_PORT:      "5432"
       CONFIGSERVER_PORT:        "8888"
-      ORGSERVERNEW_PORT:        "8087"
+      PRODUITIMMOBILIER_PORT:   "8085"
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   specialroutes-service:

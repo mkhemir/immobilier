@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TrackingFilter extends ZuulFilter{
+public class TrackingFilter {}/*extends ZuulFilter{
     private static final int      FILTER_ORDER =  1;
-    private static final boolean  SHOULD_FILTER=true;
+    private static final boolean  SHOULD_FILTER=false;
     private static final Logger logger = LoggerFactory.getLogger(TrackingFilter.class);
 
     @Autowired
@@ -18,7 +18,7 @@ public class TrackingFilter extends ZuulFilter{
 
     @Override
     public String filterType() {
-        return FilterUtils.PRE_FILTER_TYPE;
+        return FilterUtils.ROUTE_FILTER_TYPE;
     }
 
     @Override
@@ -43,8 +43,8 @@ public class TrackingFilter extends ZuulFilter{
     }
 
     public Object run() {
-
-        if (isCorrelationIdPresent()) {
+        logger.info("///////////////////////////////////////////filtering");
+      /*  if (isCorrelationIdPresent()) {
            logger.debug("tmx-correlation-id found in tracking filter: {}. ", filterUtils.getCorrelationId());
         }
         else{
@@ -53,7 +53,7 @@ public class TrackingFilter extends ZuulFilter{
         }
 
         RequestContext ctx = RequestContext.getCurrentContext();
-        logger.debug("Processing incoming request for {}.",  ctx.getRequest().getRequestURI());
-        return null;
+        logger.debug("Processing incoming request for {}.",  ctx.getRequest().getRequestURI());*/
+/*        return null;
     }
-}
+}*/

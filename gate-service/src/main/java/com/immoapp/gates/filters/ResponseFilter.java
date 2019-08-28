@@ -35,7 +35,7 @@ public class ResponseFilter extends ZuulFilter{
     @Override
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
-
+        logger.info("------------------------------------------------we got a response"+ctx.getResponse()+ctx.getResponseBody());
         logger.debug("Adding the correlation id to the outbound headers. {}", filterUtils.getCorrelationId());
         ctx.getResponse().addHeader(FilterUtils.CORRELATION_ID, filterUtils.getCorrelationId());
 

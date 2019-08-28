@@ -20,6 +20,11 @@ public class AuditController {
     public String getImmobilierMessage(){
     String msg = "le produit immobilier a dit : ";
     logger.debug("********************************************"+produitImmobilierClient.getProduitImmobilier());
-    return msg;//+produitImmobilierClient.getProduitImmobilier();
+    try {
+        return msg+produitImmobilierClient.getProduitImmobilier();
+    }
+    catch (Exception e){
+        return msg+"exception occured";
+    }
     }
 }
