@@ -23,6 +23,7 @@ zuul:
     produitimmobilierservice: /produit/**
     optimisationfiscaleservice: /optimisation/**
     auditservice: /audit/**
+    dbservice: /db/**
 
 hystrix.command.default.execution.timeout.enabled: false
 

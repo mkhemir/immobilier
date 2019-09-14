@@ -1,6 +1,6 @@
 package com.immoapp.audits.controllers;
 
-import com.immoapp.audits.services.DiscoveryService;
+import com.immoapp.audits.clients.DiscoveryClientServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,11 +12,11 @@ import java.util.List;
 @RequestMapping(value="discovery")
 public class DiscoveryController {
     @Autowired
-    private DiscoveryService discoveryService;
+    private DiscoveryClientServices discoveryClientServices;
 
     @RequestMapping(value="/eureka/services",method = RequestMethod.GET)
     public List<String> getEurekaServices() {
 
-        return discoveryService.getEurekaServices();
+        return discoveryClientServices.getEurekaServices();
     }
 }

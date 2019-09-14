@@ -25,14 +25,15 @@ services:
       DATABASESERVER_PORT:      "5432"
       CONFIGSERVER_PORT:        "8888"
       AUDIT_PORT:               "8087"
+      DB_PORT:                  "8930"
   database:
     image: postgres:9.5
     ports:
       - "5432:5432"
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=p0stgr@s
-      - POSTGRES_DB=eagle_eye_local
+      - POSTGRES_PASSWORD=Esprit292948
+      - POSTGRES_DB=immo_db_local
   optimisationfiscaleservice:
     image: immoapp/optimisation-fiscale-service:taxes
     ports:
@@ -76,6 +77,7 @@ services:
       DATABASESERVER_PORT:      "5432"
       CONFIGSERVER_PORT:        "8888"
       PRODUITIMMOBILIER_PORT:   "8085"
+      DB_PORT:                  "8930"
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   specialroutes-service:
@@ -90,6 +92,20 @@ services:
       EUREKASERVER_PORT:        "8761"
       DATABASESERVER_PORT:      "5432"
       CONFIGSERVER_PORT:        "8888"
+      ENCRYPT_KEY:       "IMSYMMETRIC"
+  db-service:
+    image: immoapp/db-service:taxes
+    ports:
+      - "8930:8930"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "8930"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT:        "8761"
+      DATABASESERVER_PORT:      "5432"
+      CONFIGSERVER_PORT:        "8888"
+      ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
 
 

@@ -26,6 +26,7 @@
         <module>gate-service</module>
         <module>audit-service</module>
         <module>specialroutes-service</module>
+        <module>db-service</module>
 
     </modules>
     <build>

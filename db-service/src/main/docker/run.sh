@@ -24,9 +24,9 @@ echo "*******  Configuration Server has started"
 
 
 echo "********************************************************"
-echo "Starting Produit Immobilier Service with Configuration Service via Eureka :  $EUREKASERVER_URI" ON PORT: $SERVER_PORT;
+echo "Starting DB Service with Configuration Service via Eureka :  $EUREKASERVER_URI" ON PORT: $SERVER_PORT;
 echo "********************************************************"
 java -Djava.security.egd=file:/dev/./urandom -Dserver.port=$SERVER_PORT   \
      -Deureka.client.serviceUrl.defaultZone=$EUREKASERVER_URI             \
      -Dspring.cloud.config.uri=$CONFIGSERVER_URI                          \
-     -Dspring.profiles.active=$PROFILE -jar /usr/local/produitimmobilierservice/@project.build.finalName@.jar
+     -Dspring.profiles.active=$PROFILE -jar /usr/local/dbservice/@project.build.finalName@.jar

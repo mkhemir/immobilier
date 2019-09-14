@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.immoapp</groupId>
-    <artifactId>audit</artifactId>
+    <artifactId>db-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Audit Service</name>
-    <description>auditservice</description>
+    <name>db Service</name>
+    <description>dbservice</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -85,19 +87,19 @@
             <version>1.18.4</version>
             <scope>provided</scope>
         </dependency>
-        <!-- <dependency>
-            <groupId>com.netflix.hystrix</groupId>
-            <artifactId>hystrix-javanica</artifactId>
-            <version>1.5.9</version>
-        </dependency> -->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>2.3.2</version>
+        </dependency>
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>com.immoapp.audits.Application</start-class>
-        <docker.image.name>immoapp/audit-service</docker.image.name>
+        <start-class>com.immoapp.db.Application</start-class>
+        <docker.image.name>immoapp/db-service</docker.image.name>
         <docker.image.tag>taxes</docker.image.tag>
     </properties>
 
@@ -157,4 +159,5 @@
             </plugin>
         </plugins>
     </build>
+    
 </project>

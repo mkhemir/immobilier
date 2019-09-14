@@ -1,4 +1,4 @@
-package com.immoapp.audits.services;
+package com.immoapp.audits.clients;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @Service
-public class DiscoveryService {
+public class DiscoveryClientServices {
     @Autowired
     RestTemplate restTemplate;
 

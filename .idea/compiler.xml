@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="audit" />
         <module name="confsvr" />
+        <module name="dbservice" />
         <module name="eurekasvr" />
         <module name="gate" />
         <module name="optimisation-fiscale-service" />
