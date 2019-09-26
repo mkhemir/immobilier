@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: dbservice
-  profiles:
-    active:
-      default
-  cloud:
-    config:
-      enabled: true

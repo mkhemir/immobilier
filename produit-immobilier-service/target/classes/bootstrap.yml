@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: produitimmobilierservice
-  profiles:
-    active:
-      default
-  cloud:
-    config:
-      enabled: true
