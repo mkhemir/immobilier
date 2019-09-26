@@ -41,11 +41,6 @@ public class ProduitImmobilier {
     @Column(name = "PARKING")
     private Boolean isParking;
     /**
-     * does it contain a basement.
-     */
-    @Column(name = "CAVE")
-    private Boolean isBasement;
-    /**
      * does it contain a lift.
      */
     @Column(name = "ASCENCEUR")
@@ -80,5 +75,29 @@ public class ProduitImmobilier {
      */
     @Column(name = "PRIX")
     private BigDecimal prix;
+
+    @Column(name = "SURFACE")
+    private Double surface;
+
+    @Column(name = "SURFACE_BALCON")
+    private Double surfaceBalcon;
+
+    @Column(name = "SURFACE_TERRASSE")
+    private Double surfaceTerrasse;
+
+    @Column(name = "SURFACE_VERANDAS")
+    private Double surfaceVerandas;
+
+    @Column(name = "SURFACE_SOUS_SOL")
+    private Double surfaceSousSol;
+
+    @Column(name = "SURFACE_CAVE")
+    private Double surfaceCave;
+
+    @Column(name = "SURFACE_LOGIAS")
+    private Double surfaceLogias;
+
+    @Column(name = "AUTRE_SURFACE_ANNEXE")
+    private Double autreSurfaceAnnexe;
 
 }

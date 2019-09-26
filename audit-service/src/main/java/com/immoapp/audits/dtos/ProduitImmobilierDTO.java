@@ -31,10 +31,6 @@ public class ProduitImmobilierDTO {
      */
     private Boolean isParking;
     /**
-     * does it contain a basement.
-     */
-    private Boolean isBasement;
-    /**
      * does it contain a lift.
      */
     private Boolean isLift;
@@ -62,5 +58,22 @@ public class ProduitImmobilierDTO {
      * THE PRODUCT PRICE.
      */
     private BigDecimal prix;
+
+    private Double surface;
+
+    private Double surfaceBalcon;
+
+    private Double surfaceTerrasse;
+
+    private Double surfaceVerandas;
+
+    private Double surfaceSousSol;
+
+    private Double surfaceCave;
+
+    private Double surfaceLogias;
+
+    private Double autreSurfaceAnnexe;
+
 }
 
