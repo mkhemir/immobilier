@@ -1,6 +1,6 @@
-package com.immoapp.audits.services;
+package com.immoapp.produit.services;
 
-import com.immoapp.audits.dtos.ProduitImmobilierDTO;
+import com.immoapp.produit.dtos.ProduitImmobilierDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,25 +41,21 @@ public class DbService {
         return restExchange.getBody();
     }
 
-    public ProduitImmobilierDTO getProduitImmobilierById(long id){
-        logger.info("receiving the call from zuul...");
+    public void saveProduitImmobilier(ProduitImmobilierDTO produitImmobilierDTO){
+        logger.info("*----------------------------..."+produitImmobilierDTO.toString());
         List<ServiceInstance> instances = discoveryClient.getInstances("gateservice");
         ServiceInstance serviceInstance = instances.get(0);
         String baseUrl = serviceInstance.getUri().toString();
-        baseUrl = baseUrl + "/api/db/produit/{id}";
-        ResponseEntity<ProduitImmobilierDTO> restExchange =null;
+        baseUrl = baseUrl + "/api/db/ajout";
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("POST", MediaType.APPLICATION_JSON_VALUE);
         try {
-            restExchange =restTemplate.exchange(
-                    baseUrl,
-                    HttpMethod.GET,
-                    null, ProduitImmobilierDTO.class, id);
-                  //  restTemplate.exchange(baseUrl, HttpMethod.GET, getHeaders(), new ParameterizedTypeReference<ProduitImmobilierDTO>(){});
+        HttpEntity<ProduitImmobilierDTO> request = new HttpEntity(produitImmobilierDTO, headers);
+            restTemplate.postForObject(baseUrl, request, String.class);
         }catch (Exception e){
-
+            logger.info("-----------------------------------------------------"+serviceInstance.getHost()+serviceInstance.isSecure()+baseUrl);
             logger.info(e.getMessage());
         }
-        logger.info("-----------------------------------------------------"+restExchange.getBody());
-        return restExchange.getBody();
     }
 
     private static HttpEntity<?> getHeaders() throws IOException {

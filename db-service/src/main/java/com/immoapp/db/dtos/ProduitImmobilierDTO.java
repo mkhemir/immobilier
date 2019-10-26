@@ -26,7 +26,7 @@ public class ProduitImmobilierDTO {
     /**
      * the number of lots.
      */
-    private String nbr_lots;
+    private Integer nbr_lots;
     /**
      * does it contain a parking.
      */
@@ -42,7 +42,7 @@ public class ProduitImmobilierDTO {
     /**
      * charges copropriété.
      */
-    private BigDecimal chargesCoprop;
+    private double chargesCoprop;
     /**
      * taxes fonciaires.
      */

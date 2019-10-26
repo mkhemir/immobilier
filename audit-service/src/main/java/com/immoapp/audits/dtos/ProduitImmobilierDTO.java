@@ -25,7 +25,7 @@ public class ProduitImmobilierDTO {
     /**
      * the number of lots.
      */
-    private String nbr_lots;
+    private Integer nbr_lots;
     /**
      * does it contain a parking.
      */
@@ -41,7 +41,7 @@ public class ProduitImmobilierDTO {
     /**
      * charges copropriété.
      */
-    private BigDecimal chargesCoprop;
+    private double chargesCoprop;
     /**
      * taxes fonciaires.
      */
@@ -59,21 +59,21 @@ public class ProduitImmobilierDTO {
      */
     private BigDecimal prix;
 
-    private Double surface;
+    private double surface;
 
-    private Double surfaceBalcon;
+    private double surfaceBalcon;
 
-    private Double surfaceTerrasse;
+    private double surfaceTerrasse;
 
-    private Double surfaceVerandas;
+    private double surfaceVerandas;
 
-    private Double surfaceSousSol;
+    private double surfaceSousSol;
 
-    private Double surfaceCave;
+    private double surfaceCave;
 
-    private Double surfaceLogias;
+    private double surfaceLogias;
 
-    private Double autreSurfaceAnnexe;
+    private double autreSurfaceAnnexe;
 
 }
 

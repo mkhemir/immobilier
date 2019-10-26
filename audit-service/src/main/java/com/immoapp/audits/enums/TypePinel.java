@@ -5,7 +5,7 @@ import com.immoapp.audits.utile.PinelConstants;
 
 public enum TypePinel {
 
-    PINEL6ANS(PinelConstants.duree6), PINEL9ans(PinelConstants.duree9), PINEL12ANS(PinelConstants.duree12);
+    PINEL6ANS(PinelConstants.duree6), PINEL9ANS(PinelConstants.duree9), PINEL12ANS(PinelConstants.duree12);
 
     private int duree;
 
@@ -18,7 +18,7 @@ public enum TypePinel {
         switch (this) {
             case PINEL6ANS:
                 return PinelConstants.discount12;
-            case PINEL9ans:
+            case PINEL9ANS:
                 return PinelConstants.discount18;
             case PINEL12ANS:
                 return PinelConstants.discount21;

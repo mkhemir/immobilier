@@ -23,4 +23,14 @@ public class PinelConstants {
     public final static double COEF_MULT_MAX = 1.2;
 
     public final static double BAREME_PINEL_A = 12.59; // TO INSERT IN DATABASE
+
+    public final static double TAEG = 0.015;
+
+    public final static double COEF_ASS = 0.0025;
+
+    public final static double COEFF_FN = 0.025;
+
+    public final static int DEFAULT_DUREE_CREDIT = 300;
+
+    public final static double COEFF_APPORT_DEFAULT = 0.1;
 }

@@ -11,6 +11,10 @@ public class DossierPinelDTO {
 
     private ProduitImmobilierDTO produitImmobilierDTO;
 
-    private ResultatLoiPinelDTO resultatLoiPinelDTO;
+    private ResultatLoiPinelDTO resultatLoiPinel6DTO;
+
+    private ResultatLoiPinelDTO resultatLoiPinel9DTO;
+
+    private ResultatLoiPinelDTO resultatLoiPinel12DTO;
 
 }

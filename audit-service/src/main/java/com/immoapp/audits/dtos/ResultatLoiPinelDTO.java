@@ -9,7 +9,10 @@ import java.math.BigDecimal;
 @Setter
 public class ResultatLoiPinelDTO {
     private double loyerMaximum;
-    private double reductionImpots6ans;
-    private double reductionImpots9ans;
-    private double reductionImpots12ans;
+    private double reductionImpots;
+    private double montantEmprunt;
+    private double economyImpots;
+    private double mensualiteCredit;
+    private double fraisAnnexe;
+    private double effortEpargne;
 }
