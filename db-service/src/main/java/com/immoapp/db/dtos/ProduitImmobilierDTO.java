@@ -3,6 +3,7 @@ package com.immoapp.db.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -75,5 +76,7 @@ public class ProduitImmobilierDTO {
     private Double surfaceLogias;
 
     private Double autreSurfaceAnnexe;
+
+    MultipartFile[] files;
 }
 
