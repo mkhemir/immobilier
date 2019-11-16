@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3ac936a-b212-4f42-8c8e-af77549cd3fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/BouvardConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ImageProduit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/dtos/ProduitImmobilierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/dtos/ProduitImmobilierDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ProduitImmobilier.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ProduitImmobilier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/services/ProduitImmobilierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/services/ProduitImmobilierService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/common/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/common/docker-compose.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/confsvr/target/" />
@@ -31,42 +26,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiPinelCalcul.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/PinelConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="731">
+              <caret line="50" column="64" selection-start-line="50" selection-start-column="64" selection-end-line="50" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java">
+        <entry file="file://$PROJECT_DIR$/docker/common/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#486#487#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="493">
+              <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/controllers/AuditController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/AuditService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -75,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/BouvardConstants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="58" lean-forward="true" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+              <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -111,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/DossierPinelDTO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="54" />
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -146,11 +134,12 @@
         <option value="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ProduitImmobilier.java" />
         <option value="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/dtos/ProduitImmobilierDTO.java" />
         <option value="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ImageProduit.java" />
-        <option value="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/services/ProduitImmobilierService.java" />
         <option value="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/DossierBouvardDTO.java" />
         <option value="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java" />
         <option value="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/BouvardConstants.java" />
         <option value="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java" />
+        <option value="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/services/ProduitImmobilierService.java" />
+        <option value="$PROJECT_DIR$/docker/common/docker-compose.yml" />
       </list>
     </option>
   </component>
@@ -185,168 +174,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="audit-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="audit-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="audit-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="audit-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="audit-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="audits" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="audit-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="audits" type="462c0819:PsiDirectoryNode" />
-              <item name="calculs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="audit-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="audits" type="462c0819:PsiDirectoryNode" />
-              <item name="dtos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="audit-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="audits" type="462c0819:PsiDirectoryNode" />
-              <item name="utile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="confsvr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="confsvr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="confsvr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="confsvr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="db-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="db-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="db-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="db-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="db-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="db-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="db-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="dtos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="db-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
@@ -359,60 +193,19 @@
               <item name="docker" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="optimisation-fiscale-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="produit-immobilier-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="produit-immobilier-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="produit-immobilier-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="produit-immobilier-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immoApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="produit-immobilier-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="produit" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573263821392" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573423492505" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spmia-chapter10/pom.xml" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -628,7 +421,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20415778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -638,7 +431,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -652,7 +445,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.28624734" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.20415778" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
@@ -706,9 +499,6 @@
     <entry file="file://$PROJECT_DIR$/db-service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/common/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/confsvr/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -746,13 +536,6 @@
     <entry file="file://$PROJECT_DIR$/db-service/src/main/resources/schema.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/services/ProduitImmobilierService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLoiPinel6DTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -764,6 +547,84 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/PinelConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/confsvr/src/main/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="84" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/services/ProduitImmobilierService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/services/ProduitImmobilierService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiPinelCalcul.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="50" column="64" selection-start-line="50" selection-start-column="64" selection-end-line="50" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/controllers/AuditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/AuditService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/BouvardConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -788,55 +649,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gate-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiPinelCalcul.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/DossierPinelDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="54" />
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/BouvardConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="58" lean-forward="true" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/gate-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/PinelConstants.java">
+    <entry file="file://$PROJECT_DIR$/docker/common/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
         </state>
       </provider>
     </entry>

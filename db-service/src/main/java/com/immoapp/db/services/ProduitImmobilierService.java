@@ -38,7 +38,7 @@ public class ProduitImmobilierService {
 
     public void saveProduct(ProduitImmobilierDTO produitImmobilierDTO){
         ProduitImmobilier produitImmobilier = modelMapper.map(produitImmobilierDTO , ProduitImmobilier.class);
-        produitImmobilier.setImages(new ArrayList<ImageProduit>());
+     /*   produitImmobilier.setImages(new ArrayList<ImageProduit>());
         Arrays.stream(produitImmobilierDTO.getFiles()).forEach(f -> {
             ImageProduit image = new ImageProduit();
             image.setName(f.getName());
@@ -47,7 +47,7 @@ public class ProduitImmobilierService {
             }
             catch (IOException e){};
             produitImmobilier.getImages().add(image);
-        });
+        });*/
          produitImmobilierRepository.save(produitImmobilier);
     }
 
