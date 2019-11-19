@@ -1,7 +1,7 @@
 version: '2'
 services:
   eurekaserver:
-    image:   immoapp/immo-eurekasvr:taxes
+    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immo-eurekasvr:immo-eurekasvr
     mem_limit: 1073741824
     ports:
       - "8761:8761"
@@ -15,7 +15,7 @@ services:
       EUREKASERVER_PORT: "8761"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   gateservice:
-    image: immoapp/immo-gate:taxes
+    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immo-gate:immo-gate
     mem_limit: 1073741824
     ports:
       - "5555:5555"
@@ -38,7 +38,7 @@ services:
       - POSTGRES_PASSWORD=Esprit292948
       - POSTGRES_DB=immo_db_local
   optimisationfiscaleservice:
-    image: immoapp/optimisation-fiscale-service:taxes
+    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/optimisation-fiscale-service:optimisation-fiscale-service
     mem_limit: 1073741824
     ports:
       - "8080:8080"
@@ -54,7 +54,7 @@ services:
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   produitimmobilierservice:
-    image: immoapp/produit-immobilier-service:taxes
+    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/produit-immobilier-service:produit-immobilier-service
     mem_limit: 1073741824
     ports:
       - "8085:8085"
@@ -70,7 +70,7 @@ services:
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   auditservice:
-    image: immoapp/audit-service:taxes
+    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/audit-service:audit-service
     mem_limit: 1073741824
     ports:
       - "8087:8087"
@@ -87,7 +87,7 @@ services:
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   specialroutes-service:
-    image: immoapp/specialroutes-service:taxes
+    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/specialroutes-service:specialroutes-service
     mem_limit: 1073741824
     ports:
       - "8910:8910"
@@ -101,7 +101,7 @@ services:
       CONFIGSERVER_PORT:        "8888"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   db-service:
-    image: immoapp/db-service:taxes
+    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/db-service:db-service
     mem_limit: 1073741824
     ports:
       - "8930:8930"

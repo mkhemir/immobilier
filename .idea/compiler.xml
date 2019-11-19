@@ -15,14 +15,15 @@
         <module name="gate" />
         <module name="optimisation-fiscale" />
         <module name="optimisation-fiscale-service" />
-        <module name="produit-immobilier-service" />
         <module name="specialroutesservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="auditservice" target="1.8" />
+      <module name="eurekasvr" target="1.8" />
       <module name="gateservice" target="1.8" />
       <module name="produit-immobilier" target="1.8" />
+      <module name="produit-immobilier-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
