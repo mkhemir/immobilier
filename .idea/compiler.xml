@@ -15,6 +15,7 @@
         <module name="gate" />
         <module name="optimisation-fiscale" />
         <module name="optimisation-fiscale-service" />
+        <module name="produit-immobilier-service" />
         <module name="specialroutesservice" />
       </profile>
     </annotationProcessing>

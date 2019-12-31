@@ -1,0 +1,6 @@
+com\immoapp\tax\controllers\BanqueController.class
+com\immoapp\tax\dtos\DossierPinelDTO.class
+com\immoapp\tax\dtos\ProduitImmobilierDTO.class
+com\immoapp\tax\Application.class
+com\immoapp\tax\dtos\ResultatLoiPinelDTO.class
+com\immoapp\tax\dtos\InformationBanqueDTO.class

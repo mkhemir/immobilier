@@ -10,7 +10,7 @@ services:
 notifications:
   slack: teamcarnell:zhTADgjsb7yJ5RPEd7LPNFwI
   email:
-    - carnell28@gmail.com
+    - marwen.kemir@gmail.com
   on_success: always
   on_failure: always
 env:

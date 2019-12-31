@@ -9,7 +9,6 @@ import java.util.Date;
 @Getter
 @Setter
 public class ProduitImmobilierDTO {
-
     /**
      * the ID of the product.
      */
@@ -35,6 +34,14 @@ public class ProduitImmobilierDTO {
      */
     private Boolean isLift;
     /**
+     * rooms.
+     */
+    public int nbrPiece;
+    /**
+     * bedrooms.
+     */
+    public int nbrChambre;
+    /**
      * the dpe.
      */
     private char dpe;
@@ -54,26 +61,32 @@ public class ProduitImmobilierDTO {
      * THE PRODUCT ADDRESS.
      */
     private String adresse;
+
+    public String codePostal;
+
+    public String ville;
     /**
      * THE PRODUCT PRICE.
      */
     private BigDecimal prix;
 
-    private Double surface;
+    private double surface;
 
-    private Double surfaceBalcon;
+    private double surfaceBalcon;
 
-    private Double surfaceTerrasse;
+    private double surfaceTerrasse;
 
-    private Double surfaceVerandas;
+    private double surfaceVerandas;
 
-    private Double surfaceSousSol;
+    private double surfaceSousSol;
 
-    private Double surfaceCave;
+    private double surfaceCave;
 
-    private Double surfaceLogias;
+    private double surfaceLogias;
 
-    private Double autreSurfaceAnnexe;
+    private double autreSurfaceAnnexe;
+
+    private double loyerEstime;
 
     @Override
     public String toString() {

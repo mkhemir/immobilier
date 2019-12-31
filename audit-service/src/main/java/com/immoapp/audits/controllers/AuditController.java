@@ -1,20 +1,17 @@
 package com.immoapp.audits.controllers;
 
-import com.immoapp.audits.calculs.LoiPinelCalcul;
-import com.immoapp.audits.dtos.DossierPinelDTO;
-import com.immoapp.audits.dtos.ProduitImmobilierDTO;
-import com.immoapp.audits.dtos.ResultatLoiPinelDTO;
+
+import com.immoapp.audits.dtos.*;
 import com.immoapp.audits.enums.TypePinel;
 import com.immoapp.audits.services.AuditService;
 import com.immoapp.audits.services.DbService;
+import com.immoapp.audits.services.OptimisationFiscaleService;
 import com.immoapp.audits.services.ProduitImmobilierService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,28 +19,30 @@ import java.util.List;
 @RestController
 public class AuditController {
     @Autowired
-    ProduitImmobilierService produitImmobilierService;
+    private ProduitImmobilierService produitImmobilierService;
     @Autowired
-    DbService dbService;
+    private DbService dbService;
     @Autowired
     AuditService auditService;
+    @Autowired
+    private OptimisationFiscaleService optimisationFiscaleService;
 
     private static final Logger logger = LoggerFactory.getLogger(AuditController.class);
 
     @CrossOrigin
     @GetMapping(value = "/dossiers")
-    public List<DossierPinelDTO> getImmobilierMessage() {
+    public List<DossierSimulationDTO> getImmobilierMessage() {
         String msg = "le produit immobilier a dit : ";
-        List<DossierPinelDTO> listDossiers = new ArrayList<>();
+        List<DossierSimulationDTO> listDossiers = new ArrayList<>();
         try {
             List<ProduitImmobilierDTO> listProduits = dbService.getProduitImmobilier();
             listProduits.stream().forEach(p -> {
-                DossierPinelDTO dossierPinelDTO = new DossierPinelDTO();
-                dossierPinelDTO.setResultatLoiPinel6DTO(auditService.getResultat(TypePinel.PINEL6ANS, p, null, null, null));
-                dossierPinelDTO.setResultatLoiPinel9DTO(auditService.getResultat(TypePinel.PINEL9ANS, p, null, null, null));
-                dossierPinelDTO.setResultatLoiPinel12DTO(auditService.getResultat(TypePinel.PINEL12ANS, p, null, null, null));
-                dossierPinelDTO.setProduitImmobilierDTO(p);
-                listDossiers.add(dossierPinelDTO);
+                DossierSimulationDTO dossierSimulationDTO = new DossierSimulationDTO();
+                dossierSimulationDTO.setResultatLoiPinel6DTO(auditService.getPinel(TypePinel.PINEL6ANS, p, null, null, null));
+                dossierSimulationDTO.setResultatLoiPinel9DTO(auditService.getPinel(TypePinel.PINEL9ANS, p, null, null, null));
+                dossierSimulationDTO.setResultatLoiPinel12DTO(auditService.getPinel(TypePinel.PINEL12ANS, p, null, null, null));
+                dossierSimulationDTO.setProduitImmobilierDTO(p);
+                listDossiers.add(dossierSimulationDTO);
             });
             return listDossiers;
         } catch (Exception e) {
@@ -51,15 +50,19 @@ public class AuditController {
         }
     }
 
+    @GetMapping(value = "/dossier/{id}",consumes = {"text/plain;charset=UTF-8", MediaType.APPLICATION_JSON_VALUE})
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping(value = "/dossier/{id}")
-    public DossierPinelDTO getDossierPinel(@PathVariable(value = "id") Long id) {
-        DossierPinelDTO dossierPinelDTO = new DossierPinelDTO();
+    public DossierSimulationDTO getSimulation(@PathVariable(value = "id") Long id) {
+        DossierSimulationDTO dossierSimulationDTO = new DossierSimulationDTO();
         ProduitImmobilierDTO produitImmobilierDTO = dbService.getProduitImmobilierById(id);
-        dossierPinelDTO.setResultatLoiPinel6DTO(auditService.getResultat(TypePinel.PINEL6ANS, produitImmobilierDTO, null, null, null));
-        dossierPinelDTO.setResultatLoiPinel9DTO(auditService.getResultat(TypePinel.PINEL9ANS, produitImmobilierDTO, null, null, null));
-        dossierPinelDTO.setResultatLoiPinel12DTO(auditService.getResultat(TypePinel.PINEL12ANS, produitImmobilierDTO, null, null, null));
-        dossierPinelDTO.setProduitImmobilierDTO(produitImmobilierDTO);
-        return dossierPinelDTO;
+        dossierSimulationDTO.setProduitImmobilierDTO(produitImmobilierDTO);
+        InformationBanqueDTO banqueInfo = optimisationFiscaleService.getInfoBanques().stream().findFirst().get();
+        dossierSimulationDTO.setResultatLoiPinel6DTO(auditService.getPinel(TypePinel.PINEL6ANS, produitImmobilierDTO, null, null, null));
+        dossierSimulationDTO.setResultatLoiPinel9DTO(auditService.getPinel(TypePinel.PINEL9ANS, produitImmobilierDTO, null, null, null));
+        dossierSimulationDTO.setResultatLoiPinel12DTO(auditService.getPinel(TypePinel.PINEL12ANS, produitImmobilierDTO, null, null, null));
+        dossierSimulationDTO.setResultatLmnpReelDto(auditService.getLmnpReel(produitImmobilierDTO));
+        dossierSimulationDTO.setResultatLmnpMicroDto(auditService.getLmnpMicro(produitImmobilierDTO));
+        //dossierSimulationDTO.setResultatBouvardDTO(new ResultatBouvardDTO());
+        return dossierSimulationDTO;
     }
 }

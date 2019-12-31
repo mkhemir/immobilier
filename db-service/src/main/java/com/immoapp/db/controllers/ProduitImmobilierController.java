@@ -16,7 +16,7 @@ public class ProduitImmobilierController {
     ProduitImmobilierService produitImmobilierService;
 
     private static final Logger logger = LoggerFactory.getLogger(ProduitImmobilierController.class);
-
+    @CrossOrigin
     @GetMapping({"/produits"})
     public List<ProduitImmobilierDTO> findAll(){
         return produitImmobilierService.findAllProducts();

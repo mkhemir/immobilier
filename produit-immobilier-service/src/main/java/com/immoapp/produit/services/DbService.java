@@ -30,7 +30,7 @@ public class DbService {
         ServiceInstance serviceInstance = instances.get(0);
         String baseUrl = serviceInstance.getUri().toString();
         baseUrl = baseUrl + "/api/db/produits";
-        ResponseEntity<List<ProduitImmobilierDTO>> restExchange =null;
+        ResponseEntity<List<ProduitImmobilierDTO>> restExchange =new ResponseEntity(HttpStatus.CREATED);
         try {
             restExchange =
                     restTemplate.exchange(baseUrl, HttpMethod.GET, getHeaders(), new ParameterizedTypeReference<List<ProduitImmobilierDTO>>(){});

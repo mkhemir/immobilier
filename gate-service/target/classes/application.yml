@@ -1,0 +1,29 @@
+server:
+  port: 5555
+
+  #Setting logging levels
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.thoughtmechanix: DEBUG
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  prefix: /api
+  routes:
+    produitimmobilierservice: /produit/**
+    optimisationfiscaleservice: /optimisation/**
+    auditservice: /audit/**
+    dbservice: /db/**
+
+hystrix.command.default.execution.timeout.enabled: false
+

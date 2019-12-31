@@ -90,8 +90,8 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>com.immoapp.produit.Application</start-class>
-        <docker.image.name>984907864453.dkr.ecr.eu-west-3.amazonaws.com/produit-immobilier-service</docker.image.name>
-        <docker.image.tag>produit-immobilier-service</docker.image.tag>
+        <docker.image.name>immoapp/produit-immobilier-service</docker.image.name>
+        <docker.image.tag>taxes</docker.image.tag>
     </properties>
 
     <build>

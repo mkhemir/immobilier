@@ -59,8 +59,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>com.immoapp.gates.ZuulServerApplication</start-class>
         <java.version>1.8</java.version>
-        <docker.image.name>984907864453.dkr.ecr.eu-west-3.amazonaws.com/immo-gate</docker.image.name>
-        <docker.image.tag>immo-gate</docker.image.tag>
+        <docker.image.name>immoapp/immo-gate</docker.image.name>
+        <docker.image.tag>taxes</docker.image.tag>
     </properties>
 
     <build>

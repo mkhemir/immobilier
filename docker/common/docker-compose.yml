@@ -1,13 +1,11 @@
 version: '2'
 services:
   eurekaserver:
-    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immo-eurekasvr:immo-eurekasvr
-    mem_limit: 1073741824
+    image:   immoapp/immo-eurekasvr:taxes
     ports:
       - "8761:8761"
   configserver:
     image: immoapp/immo-confsvr:taxes
-    mem_limit: 1073741824
     ports:
       - "8888:8888"
     environment:
@@ -15,8 +13,7 @@ services:
       EUREKASERVER_PORT: "8761"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   gateservice:
-    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immo-gate:immo-gate
-    mem_limit: 1073741824
+    image: immoapp/immo-gate:taxes
     ports:
       - "5555:5555"
     environment:
@@ -38,8 +35,7 @@ services:
       - POSTGRES_PASSWORD=Esprit292948
       - POSTGRES_DB=immo_db_local
   optimisationfiscaleservice:
-    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/optimisation-fiscale-service:optimisation-fiscale-service
-    mem_limit: 1073741824
+    image: immoapp/optimisation-fiscale-service:taxes
     ports:
       - "8080:8080"
     environment:
@@ -54,8 +50,7 @@ services:
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   produitimmobilierservice:
-    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/produit-immobilier-service:produit-immobilier-service
-    mem_limit: 1073741824
+    image: immoapp/produit-immobilier-service:taxes
     ports:
       - "8085:8085"
     environment:
@@ -70,8 +65,7 @@ services:
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   auditservice:
-    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/audit-service:audit-service
-    mem_limit: 1073741824
+    image: immoapp/audit-service:taxes
     ports:
       - "8087:8087"
     environment:
@@ -87,8 +81,7 @@ services:
       ZUULSERVER_PORT:          "5555"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   specialroutes-service:
-    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/specialroutes-service:specialroutes-service
-    mem_limit: 1073741824
+    image: immoapp/specialroutes-service:taxes
     ports:
       - "8910:8910"
     environment:
@@ -101,8 +94,7 @@ services:
       CONFIGSERVER_PORT:        "8888"
       ENCRYPT_KEY:       "IMSYMMETRIC"
   db-service:
-    image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/db-service:db-service
-    mem_limit: 1073741824
+    image: immoapp/db-service:taxes
     ports:
       - "8930:8930"
     environment:

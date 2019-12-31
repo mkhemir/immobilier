@@ -35,6 +35,14 @@ public class ProduitImmobilierDTO {
      */
     private Boolean isLift;
     /**
+     * rooms.
+     */
+    public int nbrPiece;
+    /**
+     * bedrooms.
+     */
+    public int nbrChambre;
+    /**
      * the dpe.
      */
     private char dpe;
@@ -54,6 +62,10 @@ public class ProduitImmobilierDTO {
      * THE PRODUCT ADDRESS.
      */
     private String adresse;
+
+    public String codePostal;
+
+    public String ville;
     /**
      * THE PRODUCT PRICE.
      */
@@ -74,6 +86,8 @@ public class ProduitImmobilierDTO {
     private double surfaceLogias;
 
     private double autreSurfaceAnnexe;
+
+    private double loyerEstime;
 
 }
 
