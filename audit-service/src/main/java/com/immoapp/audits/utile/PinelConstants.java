@@ -33,4 +33,6 @@ public class PinelConstants {
     public final static int DEFAULT_DUREE_CREDIT = 300;
 
     public final static double COEFF_APPORT_DEFAULT = 0.1;
+
+    public final static int NBR_ANNEE = 5;
 }

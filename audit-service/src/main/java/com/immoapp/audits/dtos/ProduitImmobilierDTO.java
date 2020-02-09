@@ -66,6 +66,10 @@ public class ProduitImmobilierDTO {
     public String codePostal;
 
     public String ville;
+
+    private boolean estSitePSMV;
+
+    private boolean estSitePVAP;
     /**
      * THE PRODUCT PRICE.
      */
@@ -88,6 +92,8 @@ public class ProduitImmobilierDTO {
     private double autreSurfaceAnnexe;
 
     private double loyerEstime;
+
+    private double coutTravaux;
 
 }
 

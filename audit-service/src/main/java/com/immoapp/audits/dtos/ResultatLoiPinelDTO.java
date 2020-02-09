@@ -15,4 +15,5 @@ public class ResultatLoiPinelDTO {
     private double mensualiteCredit;
     private double fraisAnnexe;
     private double effortEpargne;
+
 }

@@ -21,6 +21,10 @@ public class DossierSimulationDTO {
 
     private ResultatLmnpDto resultatLmnpMicroDto;
 
-//    private ResultatBouvardDTO resultatBouvardDTO;
+    private ResultatMhDTO resultatMhDto;
+
+    private ResultatMalrauxDTO resultatMalrauxDTO;
+
+    private ResultatBouvardDTO resultatBouvardDTO;
 
 }

@@ -54,6 +54,7 @@ public class AuditController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     public DossierSimulationDTO getSimulation(@PathVariable(value = "id") Long id) {
         DossierSimulationDTO dossierSimulationDTO = new DossierSimulationDTO();
+        double salaire = 2500;
         ProduitImmobilierDTO produitImmobilierDTO = dbService.getProduitImmobilierById(id);
         dossierSimulationDTO.setProduitImmobilierDTO(produitImmobilierDTO);
         InformationBanqueDTO banqueInfo = optimisationFiscaleService.getInfoBanques().stream().findFirst().get();
@@ -62,7 +63,9 @@ public class AuditController {
         dossierSimulationDTO.setResultatLoiPinel12DTO(auditService.getPinel(TypePinel.PINEL12ANS, produitImmobilierDTO, null, null, null));
         dossierSimulationDTO.setResultatLmnpReelDto(auditService.getLmnpReel(produitImmobilierDTO));
         dossierSimulationDTO.setResultatLmnpMicroDto(auditService.getLmnpMicro(produitImmobilierDTO));
-        //dossierSimulationDTO.setResultatBouvardDTO(new ResultatBouvardDTO());
+        dossierSimulationDTO.setResultatBouvardDTO(auditService.getBouvard(produitImmobilierDTO, null, 0));
+        dossierSimulationDTO.setResultatMalrauxDTO(auditService.getMalraux(produitImmobilierDTO, 25, 0));
+        dossierSimulationDTO.setResultatMhDto(auditService.getMh(produitImmobilierDTO, 25, 0, salaire));
         return dossierSimulationDTO;
     }
 }
