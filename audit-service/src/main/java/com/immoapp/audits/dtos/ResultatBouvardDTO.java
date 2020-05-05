@@ -1,11 +1,17 @@
 package com.immoapp.audits.dtos;
 
-public class ResultatBouvardDTO {
+import lombok.Getter;
+import lombok.Setter;
 
-    private double montantLoyer;
-    private double montantTvaImmobilier;
-    private double montantRecuperee;
-    private double coutFinalInvestissement;
+@Getter
+@Setter
+public class
+ResultatBouvardDTO {
+
+    private double montantTvaRecuperee;
+    private double EconomyImpots;
+    private double effortEpargne;
+    private double effortEpargneTvaIncluse;
 
 
 }

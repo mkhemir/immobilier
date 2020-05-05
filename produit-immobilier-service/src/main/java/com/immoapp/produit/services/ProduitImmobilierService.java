@@ -21,7 +21,7 @@ public class ProduitImmobilierService {
 
     private static final Logger logger = LoggerFactory.getLogger(ProduitImmobilierService.class);
 
-    public String getProduitImmobilier(){
+    public String getAllProduitsImmobilier(){
     logger.info("receiving the call from zuul...");
         List<ServiceInstance> instances = discoveryClient.getInstances("gateservice");
         ServiceInstance serviceInstance = instances.get(0);

@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
-public class DossierPinelDTO {
+public class DossierSimulationDTO {
 
     private ProduitImmobilierDTO produitImmobilierDTO;
 
@@ -17,4 +17,15 @@ public class DossierPinelDTO {
 
     private ResultatLoiPinelDTO resultatLoiPinel12DTO;
 
+    private ResultatLmnpDto resultatLmnpReelDto;
+
+    private ResultatLmnpDto resultatLmnpMicroDto;
+
+    private ResultatMhDTO resultatMhDto;
+
+    private ResultatMalrauxDTO resultatMalrauxDTO;
+
+    private ResultatBouvardDTO resultatBouvardDTO;
+
+    private DeficitFoncierDTO deficitFoncierDTO;
 }

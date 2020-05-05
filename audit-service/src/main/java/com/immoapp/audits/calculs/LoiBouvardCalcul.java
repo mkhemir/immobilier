@@ -2,23 +2,32 @@ package com.immoapp.audits.calculs;
 
 import com.immoapp.audits.dtos.ProduitImmobilierDTO;
 import com.immoapp.audits.utile.BouvardConstants;
+import com.immoapp.audits.utile.CommonConstants;
 
 public class LoiBouvardCalcul {
 
-    public double calculerTvaImmobilier(double prixProduit){
-        return prixProduit * BouvardConstants.COEFF_TVA_IMMOBILIER;
-    }
-
     //TODO
-    public double estimerMontantLoeyr(ProduitImmobilierDTO produitImmobilierDTO){
-        return 800;
+    public double estimerMontantLoyer(ProduitImmobilierDTO produitImmobilierDTO) {
+        return 700;
     }
 
-    public double calculerMontantRecupere(double prixHt){
-        return prixHt * BouvardConstants.COEFF_REDUCTION;
+
+    public double calculerEconomyImpots(double prixTTC) {
+        return (CommonConstants.getPrixHT(prixTTC) * BouvardConstants.COEFF_REDUCTION) / BouvardConstants.DUREE_BOUVARD_JOURS;
     }
 
-    public double calculerCoutFinalInvestissement(double prixHt){
-        return prixHt * (1 - BouvardConstants.COEFF_REDUCTION);
+    public double calculerTvaRecuperee(double prixTTC) {
+        return (prixTTC - CommonConstants.getPrixHT(prixTTC));
+    }
+
+    public double calculerEffortEpagne(ProduitImmobilierDTO produitImmobilierDTO, Integer dureeCredit, double taeg) {
+        return CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit, taeg)
+                - calculerEconomyImpots(produitImmobilierDTO.getPrix().doubleValue()) - estimerMontantLoyer(produitImmobilierDTO);
+    }
+
+    public double calculerEffortEpagneTvaIncluse(ProduitImmobilierDTO produitImmobilierDTO, Integer dureeCredit, double taeg) {
+        return (CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit, taeg)
+                - calculerEconomyImpots(produitImmobilierDTO.getPrix().doubleValue()) - estimerMontantLoyer(produitImmobilierDTO)
+                - (calculerTvaRecuperee(produitImmobilierDTO.getPrix().doubleValue()) / dureeCredit));
     }
 }

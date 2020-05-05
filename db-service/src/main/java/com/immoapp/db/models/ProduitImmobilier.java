@@ -47,6 +47,16 @@ public class ProduitImmobilier {
     @Column(name = "ASCENCEUR")
     private Boolean isLift;
     /**
+     * rooms.
+     */
+    @Column(name = "NBR_PIECES")
+    public int nbrPiece;
+    /**
+     * bedrooms.
+     */
+    @Column(name = "NBR_CHAMBRES")
+    public int nbrChambre;
+    /**
      * the dpe.
      */
     @Column(name = "DPE")
@@ -71,6 +81,12 @@ public class ProduitImmobilier {
      */
     @Column(name = "ADRESSE")
     private String adresse;
+
+    @Column(name = "CODEPOSTALE")
+    public String codePostal;
+
+    @Column(name = "VILLE")
+    public String ville;
     /**
      * THE PRODUCT PRICE.
      */
@@ -101,11 +117,7 @@ public class ProduitImmobilier {
     @Column(name = "AUTRE_SURFACE_ANNEXE")
     private Double autreSurfaceAnnexe;
 
-    @OneToMany(
-            cascade = CascadeType.ALL , fetch = FetchType.LAZY,
-            orphanRemoval = true
-    )
-    @JoinColumn(name = "IMAGE_ID")
-    List<ImageProduit> images;
+    @Column(name = "LOYER_ESTIME")
+    private double loyerEstime;
 
 }

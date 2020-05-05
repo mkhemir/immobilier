@@ -2,12 +2,10 @@ version: '2'
 services:
   eurekaserver:
     image:   immoapp/immo-eurekasvr:taxes
-    mem_limit: 1073741824
     ports:
       - "8761:8761"
   configserver:
     image: immoapp/immo-confsvr:taxes
-    mem_limit: 1073741824
     ports:
       - "8888:8888"
     environment:
@@ -16,7 +14,6 @@ services:
       ENCRYPT_KEY:       "IMSYMMETRIC"
   gateservice:
     image: immoapp/immo-gate:taxes
-    mem_limit: 1073741824
     ports:
       - "5555:5555"
     environment:
@@ -39,7 +36,6 @@ services:
       - POSTGRES_DB=immo_db_local
   optimisationfiscaleservice:
     image: immoapp/optimisation-fiscale-service:taxes
-    mem_limit: 1073741824
     ports:
       - "8080:8080"
     environment:
@@ -55,7 +51,6 @@ services:
       ENCRYPT_KEY:       "IMSYMMETRIC"
   produitimmobilierservice:
     image: immoapp/produit-immobilier-service:taxes
-    mem_limit: 1073741824
     ports:
       - "8085:8085"
     environment:
@@ -71,7 +66,6 @@ services:
       ENCRYPT_KEY:       "IMSYMMETRIC"
   auditservice:
     image: immoapp/audit-service:taxes
-    mem_limit: 1073741824
     ports:
       - "8087:8087"
     environment:
@@ -88,7 +82,6 @@ services:
       ENCRYPT_KEY:       "IMSYMMETRIC"
   specialroutes-service:
     image: immoapp/specialroutes-service:taxes
-    mem_limit: 1073741824
     ports:
       - "8910:8910"
     environment:
@@ -102,7 +95,6 @@ services:
       ENCRYPT_KEY:       "IMSYMMETRIC"
   db-service:
     image: immoapp/db-service:taxes
-    mem_limit: 1073741824
     ports:
       - "8930:8930"
     environment:
