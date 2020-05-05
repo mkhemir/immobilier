@@ -51,7 +51,7 @@ public class AuditController {
     }
 
     @GetMapping(value = "/dossier/{id}",consumes = {"text/plain;charset=UTF-8", MediaType.APPLICATION_JSON_VALUE})
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "*")
     public DossierSimulationDTO getSimulation(@PathVariable(value = "id") Long id) {
         DossierSimulationDTO dossierSimulationDTO = new DossierSimulationDTO();
         double salaire = 2500;
@@ -66,6 +66,7 @@ public class AuditController {
         dossierSimulationDTO.setResultatBouvardDTO(auditService.getBouvard(produitImmobilierDTO, null, 0));
         dossierSimulationDTO.setResultatMalrauxDTO(auditService.getMalraux(produitImmobilierDTO, 25, 0));
         dossierSimulationDTO.setResultatMhDto(auditService.getMh(produitImmobilierDTO, 25, 0, salaire));
+        dossierSimulationDTO.setDeficitFoncierDTO(auditService.getDeficitFincier(produitImmobilierDTO));
         return dossierSimulationDTO;
     }
 }

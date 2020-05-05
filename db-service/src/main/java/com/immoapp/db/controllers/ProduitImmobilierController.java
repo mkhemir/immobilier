@@ -29,7 +29,7 @@ public class ProduitImmobilierController {
     @CrossOrigin
     @GetMapping({"/produit/{id}"})
     public ProduitImmobilierDTO findProduit(@PathVariable(value = "id") Long id){
-        logger.info("/////////////////// db a recu l'appel : "+id);
+        logger.info("///////////////////.............................. db a recu l'appel : "+id);
         ProduitImmobilierDTO p= produitImmobilierService.getProduitImmobilier(id);
         logger.info("/////////////////// retournr : "+p);
         return  p;

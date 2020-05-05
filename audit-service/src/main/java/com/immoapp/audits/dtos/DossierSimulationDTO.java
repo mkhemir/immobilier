@@ -27,4 +27,5 @@ public class DossierSimulationDTO {
 
     private ResultatBouvardDTO resultatBouvardDTO;
 
+    private DeficitFoncierDTO deficitFoncierDTO;
 }

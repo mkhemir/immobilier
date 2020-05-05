@@ -26,7 +26,7 @@ public class test {
         produitImmobilierDTO.setSurface(40);
         LoiPinelCalcul loiPinelCalcul = new LoiPinelCalcul();
         loiPinelCalcul.calculerEffortEpargne(produitImmobilierDTO , TypePinel.PINEL6ANS, 240 , 0.0, 0.0, PinelConstants.NBR_ANNEE);
-        loiPinelCalcul.calculerMensulaiteCredit(100000,240,0.04);
+        loiPinelCalcul.calculerMensulaiteCredit(120000,180,0.02);
      //   System.out.println("-- "+loiBouvardCalcul.calculerEffortEpagne(produitImmobilierDTO,300, 0.0365));
 
 
