@@ -24,6 +24,8 @@ public class test {
         ProduitImmobilierDTO produitImmobilierDTO = new ProduitImmobilierDTO();
         produitImmobilierDTO.setPrix(new BigDecimal(200000));
         produitImmobilierDTO.setSurface(40);
+        produitImmobilierDTO.setCoutTravaux(120000);
+        produitImmobilierDTO.setLoyerEstime(900);
         LoiPinelCalcul loiPinelCalcul = new LoiPinelCalcul();
         loiPinelCalcul.calculerEffortEpargne(produitImmobilierDTO , TypePinel.PINEL6ANS, 240 , 0.0, 0.0, PinelConstants.NBR_ANNEE);
         loiPinelCalcul.calculerMensulaiteCredit(120000,180,0.02);
@@ -31,8 +33,10 @@ public class test {
 
 
         AuditService auditService = new AuditService();
-        DeficitFoncierDTO df = auditService.getDeficitFincier(produitImmobilierDTO);
-        logger.info("+++++++++++"+df.getGainImpots());
+        DeficitFoncierDTO df = auditService.getDeficitFincier(produitImmobilierDTO, false, 0,50000, 300, 0.015);
+        logger.info("+++++++++++"+df.getEffortEpargne());
+        logger.info("+++++++++++"+df.getDeficit());
+        logger.info("+++++++++++"+Math.ceil(9.4));
     }
 
 

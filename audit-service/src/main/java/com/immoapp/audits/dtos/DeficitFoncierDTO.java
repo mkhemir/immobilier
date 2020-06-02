@@ -12,6 +12,9 @@ public class DeficitFoncierDTO {
     private double revenusLoyer;
     private double interetEmprunt;
     private double chargesNonFinanciere;
+    private double deficit;
+    private double economyImpots;
+    private double effortEpargne;
     private Map<Integer, Double> gainImpots;
-    private Map<Integer, Double> effortEpargne;
+    private Map<Integer, Double> listEffortEpargne;
 }

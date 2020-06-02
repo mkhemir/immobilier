@@ -66,10 +66,13 @@ public class LoiPinelCalcul {
         return calculerLoyerMax(produitImmobilierDTO) * 0.25;
     }
 
+    //TOFIX enlever les frais comme dans les autres lois
     public double calculerEffortEpargne(ProduitImmobilierDTO produitImmobilierDTO, TypePinel pinel, Integer dureeCredit, Double apport, Double taeg, int annee) {
         double loyerMax = calculerLoyerMax(produitImmobilierDTO);
         double montantEmprunt = calculerMontantEmprunt(produitImmobilierDTO.getPrix().doubleValue(), apport);
-        double economyImpots = calculerEconomieImpot(produitImmobilierDTO.getPrix().doubleValue(), pinel, annee) / 12;
+        double economyImpots = pinel == TypePinel.PINEL12ANS ? ((calculerEconomieImpot(produitImmobilierDTO.getPrix().doubleValue(), pinel, 9) * 9)
+                + (calculerEconomieImpot(produitImmobilierDTO.getPrix().doubleValue(), pinel, 12) * 3)) / 144 :
+                calculerEconomieImpot(produitImmobilierDTO.getPrix().doubleValue(), pinel, 6) / 12;
         double mensualiteCredits = calculerMensulaiteCredit(montantEmprunt, dureeCredit, taeg);
         double autresCharges = calculerFraisAnnexes(produitImmobilierDTO) / 12;
         double taxeFonciere = loyerMax / 12;

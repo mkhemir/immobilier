@@ -9,7 +9,14 @@ import java.util.List;
 @Setter
 public class ResultatMhDTO {
 
-    private double tmi;
+    private double tmiInv;
+
+    private double tmiHab;
+
+    // nombre d4annee de deduction sur les impots des charges fonciers li2s aux travaux
+    private double dureeXenorationImpotInv;
+
+    private double dureeXenorationImpotHab;
 
     private double mensualiteCredit;
 

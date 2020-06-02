@@ -7,16 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="audit" />
-        <module name="configserver" />
-        <module name="confsvr" />
-        <module name="db-service" />
+        <module name="specialroutesservice" />
         <module name="dbservice" />
-        <module name="gate" />
         <module name="optimisation-fiscale" />
         <module name="optimisation-fiscale-service" />
+        <module name="audit" />
+        <module name="gate" />
+        <module name="confsvr" />
         <module name="produit-immobilier-service" />
-        <module name="specialroutesservice" />
+        <module name="db-service" />
+        <module name="configserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

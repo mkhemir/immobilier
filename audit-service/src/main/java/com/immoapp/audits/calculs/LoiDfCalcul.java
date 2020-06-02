@@ -2,14 +2,17 @@ package com.immoapp.audits.calculs;
 
 import com.immoapp.audits.dtos.DeficitFoncierDTO;
 import com.immoapp.audits.utile.CommonConstants;
+import com.immoapp.audits.utile.InfoTmi;
 
 public class LoiDfCalcul {
 
     private double reportSurRevenus;
     private double tmi;
+    private DeficitFoncierDTO deficitFoncierDTO;
 
-    public LoiDfCalcul(double salaire) {
-        this.tmi = CommonConstants.getTmi(salaire);
+    public LoiDfCalcul(double salaire, boolean estCouple , int nbreEnfants, DeficitFoncierDTO deficit) {
+        this.tmi = new InfoTmi(salaire, estCouple, nbreEnfants).getTmi();
+        this.deficitFoncierDTO = deficit;
     }
 
     public Double calculerDeficitFoncier(double revenusLoyer, double interetEmprunt, double chargesNonFinanciere) {
@@ -51,5 +54,23 @@ public class LoiDfCalcul {
         double deficit = chargesNonFinanciere + interetEmprunt - revenusLoyer;
         this.reportSurRevenus += deficit - 10700;
         return 10700 * this.tmi;
+    }
+
+    public double calculerEconoImpots(double revenusLoyer, double interetEmprunt, double chargesNonFinanciere, double revenus , boolean estCouple , int nbrEnfants) {
+        double deficit = chargesNonFinanciere + interetEmprunt - revenusLoyer;
+        if (deficit > 10700) {
+            deficit = 10700;
+        }
+        this.deficitFoncierDTO.setDeficit(deficit);
+        double oldTmi = new InfoTmi(revenus + revenusLoyer , estCouple , nbrEnfants).getTmi();
+        double newTmi = new InfoTmi(revenus - deficit , estCouple , nbrEnfants).getTmi();
+        double normalTaxe = (revenus + revenusLoyer) * oldTmi + revenusLoyer * CommonConstants.PRELEVEMENT_SOCIAUX;
+        double newTaxe = 0.0;
+        if (deficit > 0) {
+            newTaxe = (revenus - deficit) * newTmi;
+        } else {
+            newTaxe = (revenus - deficit) * newTmi - deficit * CommonConstants.PRELEVEMENT_SOCIAUX;
+        }
+        return (normalTaxe - newTaxe) / 12;
     }
 }
