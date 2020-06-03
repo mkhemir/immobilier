@@ -20,152 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ac936a-b212-4f42-8c8e-af77549cd3fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiDenormandieCalcul.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatDenormandieDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/InfoTmi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/auditservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/auditservice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/docker/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/docker/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiDfCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiDfCalcul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiLmnpCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiLmnpCalcul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiMalrauxCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiMalrauxCalcul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiMhCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiMhCalcul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiPinelCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiPinelCalcul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/clients/DiscoveryClientServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/clients/DiscoveryClientServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/controllers/AuditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/controllers/AuditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/controllers/DiscoveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/controllers/DiscoveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/AdresseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/AdresseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/DeficitFoncierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/DeficitFoncierDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/DossierSimulationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/DossierSimulationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/InformationBanqueDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/InformationBanqueDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ProduitImmobilierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ProduitImmobilierDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLmnpDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLmnpDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLoiPinel12DTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLoiPinel12DTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLoiPinel6DTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLoiPinel6DTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLoiPinel9DTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLoiPinel9DTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLoiPinelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLoiPinelDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatMalrauxDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatMalrauxDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatMhDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatMhDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/enums/LoyerEstimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/enums/LoyerEstimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/enums/TypePinel.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/enums/TypePinel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/AuditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/AuditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/DbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/DbService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/OptimisationFiscaleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/OptimisationFiscaleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/ProduitImmobilierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/ProduitImmobilierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/BouvardConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/BouvardConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/CommonConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/CommonConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/LmnpConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/LmnpConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/MalrauxConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/MalrauxConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/PinelConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/PinelConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/confsvr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/confsvr.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/src/main/docker/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/src/main/docker/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/src/main/java/com/immoapp/confsvr/ConfigServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/src/main/java/com/immoapp/confsvr/ConfigServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/src/main/resources/config/optimisationfiscaleservice/optimisationfiscaleservice-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/src/main/resources/config/optimisationfiscaleservice/optimisationfiscaleservice-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/src/main/resources/config/optimisationfiscaleservice/optimisationfiscaleservice-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/src/main/resources/config/optimisationfiscaleservice/optimisationfiscaleservice-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confsvr/src/main/resources/config/optimisationfiscaleservice/optimisationfiscaleservice.yml" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/src/main/resources/config/optimisationfiscaleservice/optimisationfiscaleservice.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/docker/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/docker/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/controllers/ProduitImmobilierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/controllers/ProduitImmobilierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/dtos/ProduitImmobilierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/dtos/ProduitImmobilierDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ImageProduit.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ImageProduit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ProduitImmobilier.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ProduitImmobilier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/repository/ProduitImmobilierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/repository/ProduitImmobilierRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/services/ProduitImmobilierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/services/ProduitImmobilierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/common/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/common/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekasvr/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekasvr/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekasvr/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/eurekasvr/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekasvr/src/main/docker/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/eurekasvr/src/main/docker/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekasvr/src/main/java/com/immoapp/eurekasvr/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eurekasvr/src/main/java/com/immoapp/eurekasvr/EurekaServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekasvr/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekasvr/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/docker/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/docker/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/ZuulServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/ZuulServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/filters/FilterUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/filters/FilterUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/filters/ResponseFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/filters/ResponseFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/filters/TrackingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/filters/TrackingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/model/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/model/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/utils/UserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/utils/UserContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/utils/UserContextFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/utils/UserContextFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/utils/UserContextHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/utils/UserContextHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/utils/UserContextInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/java/com/immoapp/gates/utils/UserContextInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mss-parent-pom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mss-parent-pom.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/docker/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/docker/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/controllers/BanqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/controllers/BanqueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/DossierPinelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/DossierPinelDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/InformationBanqueDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/InformationBanqueDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/ProduitImmobilierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/ProduitImmobilierDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/ResultatLoiPinelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/ResultatLoiPinelDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/TmiDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/java/com/immoapp/tax/dtos/TmiDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/produit-immobilier-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/produit-immobilier-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/docker/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/docker/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/clients/DiscoveryClientServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/clients/DiscoveryClientServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/controllers/DiscoveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/controllers/DiscoveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/controllers/ProduitImmobilierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/controllers/ProduitImmobilierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/dtos/ProduitImmobilierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/dtos/ProduitImmobilierDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/dtos/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/dtos/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/services/DbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/services/DbService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/services/ProduitImmobilierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/java/com/immoapp/produit/services/ProduitImmobilierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/docker/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/docker/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/controllers/SpecialRoutesServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/controllers/SpecialRoutesServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/exception/NoRouteFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/exception/NoRouteFound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/hystrix/DelegatingUserContextCallable.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/hystrix/DelegatingUserContextCallable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/hystrix/ThreadLocalAwareStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/hystrix/ThreadLocalAwareStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/hystrix/ThreadLocalConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/hystrix/ThreadLocalConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/model/AbTestingRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/model/AbTestingRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/repository/AbTestingRouteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/repository/AbTestingRouteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/services/AbTestingRouteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/services/AbTestingRouteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/utils/UserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/utils/UserContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/utils/UserContextFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/utils/UserContextFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/utils/UserContextHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/utils/UserContextHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/utils/UserContextInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/java/com/thoughtmechanix/specialroutes/utils/UserContextInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialroutes-service/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -499,38 +363,38 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="479" y="288" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1590942079535" />
-    <state width="1807" height="216" key="GridCell.Tab.0.bottom" timestamp="1591126704884">
+    <state width="1807" height="237" key="GridCell.Tab.0.bottom" timestamp="1591136962254">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="216" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1591126704884" />
-    <state width="1807" height="216" key="GridCell.Tab.0.center" timestamp="1591126704882">
+    <state width="1807" height="237" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1591136962254" />
+    <state width="1807" height="237" key="GridCell.Tab.0.center" timestamp="1591136962253">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="216" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1591126704882" />
-    <state width="1807" height="216" key="GridCell.Tab.0.left" timestamp="1591126704882">
+    <state width="1807" height="237" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1591136962253" />
+    <state width="1807" height="237" key="GridCell.Tab.0.left" timestamp="1591136962252">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="216" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1591126704882" />
-    <state width="1807" height="216" key="GridCell.Tab.0.right" timestamp="1591126704882">
+    <state width="1807" height="237" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1591136962252" />
+    <state width="1807" height="237" key="GridCell.Tab.0.right" timestamp="1591136962254">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="216" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1591126704882" />
-    <state width="1807" height="216" key="GridCell.Tab.1.bottom" timestamp="1591126705094">
+    <state width="1807" height="237" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1591136962253" />
+    <state width="1807" height="216" key="GridCell.Tab.1.bottom" timestamp="1591136040886">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="216" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1591126705094" />
-    <state width="1807" height="216" key="GridCell.Tab.1.center" timestamp="1591126705094">
+    <state width="1807" height="216" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1591136040886" />
+    <state width="1807" height="216" key="GridCell.Tab.1.center" timestamp="1591136040886">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="216" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1591126705094" />
-    <state width="1807" height="216" key="GridCell.Tab.1.left" timestamp="1591126705094">
+    <state width="1807" height="216" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1591136040886" />
+    <state width="1807" height="216" key="GridCell.Tab.1.left" timestamp="1591136040886">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="216" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1591126705094" />
-    <state width="1807" height="216" key="GridCell.Tab.1.right" timestamp="1591126705094">
+    <state width="1807" height="216" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1591136040886" />
+    <state width="1807" height="216" key="GridCell.Tab.1.right" timestamp="1591136040886">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="216" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1591126705094" />
+    <state width="1807" height="216" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1591136040886" />
     <state x="476" y="130" width="1024" height="845" key="SettingsEditor" timestamp="1591009328514">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -539,6 +403,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591057129942" />
+    <state x="603" y="166" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591148227479">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="603" y="166" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1591148227479" />
     <state x="684" y="161" width="664" height="783" key="find.popup" timestamp="1591033715434">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

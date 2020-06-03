@@ -28,7 +28,7 @@ public class ResultatMhDTO {
 
     private int dureeTravaux;
 
-    private double moyenneEffortEpargneInvest;
+    private double effortEpargne;
 
     private double moyenneEffortEpargneHabit;
 

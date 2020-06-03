@@ -22,7 +22,7 @@ public class AuditService {
 
 
     public AuditService() {
-        this.lmnpCalcul = new LoiLmnpCalcul();
+
     }
 
     public ResultatLoiPinelDTO getPinel(TypePinel typePinel, ProduitImmobilierDTO p, double apport, Integer dureeCredit, Double taeg) {
@@ -48,28 +48,32 @@ public class AuditService {
         return resultatBouvardDTO;
     }
 
-    public ResultatLmnpDto getLmnpReel(ProduitImmobilierDTO produitImmobilierDTO, double taeg) {
-        return lmnpCalcul.getRegimeReel(produitImmobilierDTO.getLoyerEstime() != 0 ? produitImmobilierDTO.getLoyerEstime() : LoyerEstimation.getLoyer(produitImmobilierDTO.getNbrPiece()),
-                produitImmobilierDTO.getPrix().doubleValue(), taeg);
+    public ResultatLmnpDto getLmnpReel(ProduitImmobilierDTO produitImmobilierDTO, double taeg, double apport,
+                                       double revenus, boolean estCouple, int nbrEnfants, int dureeCredit) {
+        this.lmnpCalcul = this.lmnpCalcul == null ? new LoiLmnpCalcul(revenus, estCouple, nbrEnfants,
+                produitImmobilierDTO.getLoyerEstime() * 12 , apport) : this.lmnpCalcul;
+        return lmnpCalcul.getRegimeReel(produitImmobilierDTO, taeg, dureeCredit);
     }
 
-    public ResultatLmnpDto getLmnpMicro(ProduitImmobilierDTO produitImmobilierDTO, double taeg) {
-        return lmnpCalcul.getRegimeMicro(produitImmobilierDTO.getLoyerEstime() != 0 ? produitImmobilierDTO.getLoyerEstime() : LoyerEstimation.getLoyer(produitImmobilierDTO.getNbrPiece()),
-                produitImmobilierDTO.getPrix().doubleValue(), taeg);
+    public ResultatLmnpDto getLmnpMicro(ProduitImmobilierDTO produitImmobilierDTO, double taeg, double apport,
+                                        double revenus, boolean estCouple, int nbrEnfants, int dureeCredit) {
+        this.lmnpCalcul = this.lmnpCalcul == null ? new LoiLmnpCalcul(revenus, estCouple, nbrEnfants,
+                produitImmobilierDTO.getLoyerEstime() * 12 , apport) : this.lmnpCalcul;
+        return lmnpCalcul.getRegimeMicro(produitImmobilierDTO, dureeCredit, taeg);
     }
 
-    public ResultatMalrauxDTO getMalraux(ProduitImmobilierDTO produitImmobilierDTO, int duree, double taeg) {
+    public ResultatMalrauxDTO getMalraux(ProduitImmobilierDTO produitImmobilierDTO, int duree, double taeg, double apport) {
         LoiMalrauxCalcul loiMalraux = new LoiMalrauxCalcul();
-        return loiMalraux.calculerLoiMalraux(produitImmobilierDTO, duree, taeg);
+        return loiMalraux.calculerLoiMalraux(produitImmobilierDTO, duree, taeg, apport);
     }
 
-    public ResultatMhDTO getMh(ProduitImmobilierDTO produitImmobilierDTO, int duree, double taeg, double salaire) {
+    public ResultatMhDTO getMh(ProduitImmobilierDTO produitImmobilierDTO, int duree, double taeg, double revenus, boolean estCouple, int nbreEnfants, double apport) {
         LoiMhCalcul loiMh = new LoiMhCalcul();
-        return loiMh.calculerLoiMh(produitImmobilierDTO, duree, taeg, salaire);
+        return loiMh.calculerLoiMh(produitImmobilierDTO, duree, taeg, revenus, estCouple, nbreEnfants, apport);
     }
 
     // TOFIX LES CHARGES FINANCIERES ET NON FINANCIERES URGENT
-    public DeficitFoncierDTO getDeficitFincier(ProduitImmobilierDTO produitImmobilierDTO, boolean estCouple, int nbreEnfants, double revenus, int dureeCredit, double taeg) {
+    public DeficitFoncierDTO getDeficitFincier(ProduitImmobilierDTO produitImmobilierDTO, boolean estCouple, int nbreEnfants, double revenus, int dureeCredit, double taeg, double apport) {
         DeficitFoncierDTO deficitFoncierDTO = new DeficitFoncierDTO();
         LoiDfCalcul loiDf = new LoiDfCalcul(revenus, estCouple, nbreEnfants, deficitFoncierDTO);
         Map<Integer, Double> mapDeficits = new HashMap<>();
@@ -81,7 +85,7 @@ public class AuditService {
                 deficitFoncierDTO.getChargesNonFinanciere(), revenus, estCouple, nbreEnfants);
         deficitFoncierDTO.setEconomyImpots(economyImpots);
         deficitFoncierDTO.setEffortEpargne(produitImmobilierDTO.getLoyerEstime() + economyImpots -
-                CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux() ,dureeCredit, taeg));
+                CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux() - apport, dureeCredit, taeg));
         for (int i = currentYear; i < currentYear + 5; i++) {
             mapDeficits.put(i, loiDf.calculerDeficitFoncier(deficitFoncierDTO.getRevenusLoyer(),
                     deficitFoncierDTO.getInteretEmprunt(), deficitFoncierDTO.getChargesNonFinanciere()));
@@ -94,7 +98,7 @@ public class AuditService {
                                                  ProduitImmobilierDTO produitImmobilierDTO, double tmi) {
         ResultatDenormandieDTO denormandie = new ResultatDenormandieDTO();
         LoiDenormandieCalcul denormandieCalcul = new LoiDenormandieCalcul(denormandie,
-                produitImmobilierDTO.getPrix().doubleValue() - apport, dureeCredit, taeg, produitImmobilierDTO);
+                produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux() - apport, dureeCredit, taeg, produitImmobilierDTO);
         denormandieCalcul.calculerEffortEpargne(tmi);
         return denormandie;
 

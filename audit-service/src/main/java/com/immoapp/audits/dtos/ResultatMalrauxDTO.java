@@ -17,7 +17,7 @@ public class ResultatMalrauxDTO {
 
     private int dureeTravaux;
 
-    private double moyenneEffortEpargne;
+    private double effortEpargne;
 
     private List<Double> listEffortEpargnes;
 
