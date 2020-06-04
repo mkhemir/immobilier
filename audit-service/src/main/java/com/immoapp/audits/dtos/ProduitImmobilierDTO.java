@@ -95,5 +95,7 @@ public class ProduitImmobilierDTO {
 
     private double coutTravaux;
 
+    private boolean estNeuf;
+
 }
 

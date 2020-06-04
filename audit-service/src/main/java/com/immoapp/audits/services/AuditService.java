@@ -4,6 +4,7 @@ import com.immoapp.audits.calculs.*;
 import com.immoapp.audits.dtos.*;
 import com.immoapp.audits.enums.LoyerEstimation;
 import com.immoapp.audits.enums.TypePinel;
+import com.immoapp.audits.utile.BouvardConstants;
 import com.immoapp.audits.utile.CommonConstants;
 import com.immoapp.audits.utile.PinelConstants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,18 +34,19 @@ public class AuditService {
         resultatLoiPinelDTO.setMontantEmprunt(loiPinelCalcul.calculerMontantEmprunt(p.getPrix().doubleValue(), apport));
         resultatLoiPinelDTO.setEconomyImpots(loiPinelCalcul.calculerEconomieImpot(p.getPrix().doubleValue(), typePinel, PinelConstants.NBR_ANNEE));
         resultatLoiPinelDTO.setMensualiteCredit(loiPinelCalcul.calculerMensulaiteCredit(resultatLoiPinelDTO.getMontantEmprunt(), dureeCredit, taeg));
-        resultatLoiPinelDTO.setFraisAnnexe(loiPinelCalcul.calculerFraisAnnexes(p));
+        resultatLoiPinelDTO.setFraisAnnexe(resultatLoiPinelDTO.getLoyerMaximum() / 4);
         resultatLoiPinelDTO.setEffortEpargne(loiPinelCalcul.calculerEffortEpargne(p, typePinel, dureeCredit, apport, taeg, PinelConstants.NBR_ANNEE));
         return resultatLoiPinelDTO;
     }
 
-    public ResultatBouvardDTO getBouvard(ProduitImmobilierDTO produitImmobilierDTO, Integer dureeCredit, double taeg) {
+    public ResultatBouvardDTO getBouvard(ProduitImmobilierDTO produitImmobilierDTO, Integer dureeCredit, double taeg, double apport) {
         LoiBouvardCalcul loiBouvardCalcul = new LoiBouvardCalcul();
         ResultatBouvardDTO resultatBouvardDTO = new ResultatBouvardDTO();
-        resultatBouvardDTO.setEconomyImpots(loiBouvardCalcul.calculerEconomyImpots(produitImmobilierDTO.getPrix().doubleValue()));
+        resultatBouvardDTO.setEconomyImpots(loiBouvardCalcul.calculerEconomyImpots(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit));
+        resultatBouvardDTO.setGainImpots9Ans(CommonConstants.getPrixHT(produitImmobilierDTO.getPrix().doubleValue()) * BouvardConstants.COEFF_REDUCTION);
         resultatBouvardDTO.setMontantTvaRecuperee(loiBouvardCalcul.calculerTvaRecuperee(produitImmobilierDTO.getPrix().doubleValue()));
-        resultatBouvardDTO.setEffortEpargne(loiBouvardCalcul.calculerEffortEpagne(produitImmobilierDTO, dureeCredit, taeg));
-        resultatBouvardDTO.setEffortEpargneTvaIncluse(loiBouvardCalcul.calculerEffortEpagne(produitImmobilierDTO, dureeCredit, taeg));
+        resultatBouvardDTO.setEffortEpargne(loiBouvardCalcul.calculerEffortEpagne(produitImmobilierDTO, dureeCredit, taeg, apport));
+        resultatBouvardDTO.setEffortEpargneSansTVA(loiBouvardCalcul.calculerEffortEpagneSansTVA(produitImmobilierDTO, dureeCredit, taeg, apport));
         return resultatBouvardDTO;
     }
 
@@ -62,9 +64,10 @@ public class AuditService {
         return lmnpCalcul.getRegimeMicro(produitImmobilierDTO, dureeCredit, taeg);
     }
 
-    public ResultatMalrauxDTO getMalraux(ProduitImmobilierDTO produitImmobilierDTO, int duree, double taeg, double apport) {
+    public ResultatMalrauxDTO getMalraux(ProduitImmobilierDTO produitImmobilierDTO, int duree, double taeg, double apport,
+                                         double revenus, boolean estCouple, int nbrEnfants) {
         LoiMalrauxCalcul loiMalraux = new LoiMalrauxCalcul();
-        return loiMalraux.calculerLoiMalraux(produitImmobilierDTO, duree, taeg, apport);
+        return loiMalraux.calculerLoiMalraux(produitImmobilierDTO, duree, taeg, apport, revenus, estCouple, nbrEnfants);
     }
 
     public ResultatMhDTO getMh(ProduitImmobilierDTO produitImmobilierDTO, int duree, double taeg, double revenus, boolean estCouple, int nbreEnfants, double apport) {
@@ -85,7 +88,7 @@ public class AuditService {
                 deficitFoncierDTO.getChargesNonFinanciere(), revenus, estCouple, nbreEnfants);
         deficitFoncierDTO.setEconomyImpots(economyImpots);
         deficitFoncierDTO.setEffortEpargne(produitImmobilierDTO.getLoyerEstime() + economyImpots -
-                CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux() - apport, dureeCredit, taeg));
+                CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux() , dureeCredit, taeg, apport, false));
         for (int i = currentYear; i < currentYear + 5; i++) {
             mapDeficits.put(i, loiDf.calculerDeficitFoncier(deficitFoncierDTO.getRevenusLoyer(),
                     deficitFoncierDTO.getInteretEmprunt(), deficitFoncierDTO.getChargesNonFinanciere()));
@@ -98,7 +101,7 @@ public class AuditService {
                                                  ProduitImmobilierDTO produitImmobilierDTO, double tmi) {
         ResultatDenormandieDTO denormandie = new ResultatDenormandieDTO();
         LoiDenormandieCalcul denormandieCalcul = new LoiDenormandieCalcul(denormandie,
-                produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux() - apport, dureeCredit, taeg, produitImmobilierDTO);
+                produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux(), dureeCredit, taeg, produitImmobilierDTO, apport);
         denormandieCalcul.calculerEffortEpargne(tmi);
         return denormandie;
 

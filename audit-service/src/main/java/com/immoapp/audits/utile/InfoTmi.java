@@ -7,16 +7,16 @@ import lombok.Setter;
 @Getter
 @Setter
 public class InfoTmi {
-    double tmi;
-    double ceilingAmount;
-    double impots;
+    private double tmi;
+    private double ceilingAmount;
+    private double impots;
 
     public InfoTmi(double revenus, boolean estCouple, int nbreEnfants) {
         this.tmi = getTmi(revenus);
         this.impots = getImpots(this.tmi, revenus, estCouple, nbreEnfants);
     }
 
-    public static double getTmi(double revenus) {
+    private double getTmi(double revenus) {
         if (revenus <= 10064) {
             return 0;
         } else if (revenus > 10064 && revenus <= 25659) {
@@ -30,7 +30,7 @@ public class InfoTmi {
         }
     }
 
-    public double getImpots(double tmi, double revenus, boolean estCouple, int nbreEnfants) {
+    private double getImpots(double tmi, double revenus, boolean estCouple, int nbreEnfants) {
         double quotientFamilial = estCouple ? 2 + 0.5 * nbreEnfants : 1 + 0.5 * nbreEnfants;
         double revenusFam = revenus / quotientFamilial;
         if (tmi == 0) {

@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 public class LoiLmnpCalcul {
 
     private double tmi;
-    private  double apport;
+    private double apport;
 
     public LoiLmnpCalcul(double revenus, boolean estCouple, int nbrEnfants, double revenusLoyer, double apport) {
         tmi = new InfoTmi(revenus + revenusLoyer, estCouple, nbrEnfants).getTmi();
@@ -37,7 +37,7 @@ public class LoiLmnpCalcul {
         double economyImpot = (produitImmobilier.getLoyerEstime() * (this.tmi + LmnpConstants.COEFF_CSG)) - (totalImpots / 12);
         resultatLmnpDto.setEconomyImpots(economyImpot);
         resultatLmnpDto.setEffortEpargne(produitImmobilier.getLoyerEstime() + economyImpot -
-                CommonConstants.calculerMensulaiteCredit(produitImmobilier.getPrix().doubleValue() - this.apport, dureeCredit, taeg));
+                CommonConstants.calculerMensulaiteCredit(produitImmobilier.getPrix().doubleValue(), dureeCredit, taeg, this.apport, false));
         return resultatLmnpDto;
     }
 
@@ -58,7 +58,7 @@ public class LoiLmnpCalcul {
         double economyImpot = (loyer * (this.tmi + LmnpConstants.COEFF_CSG)) - (totalImpots / 12);
         resultatLmnpDto.setEconomyImpots(economyImpot);
         resultatLmnpDto.setEffortEpargne(loyer + economyImpot -
-                CommonConstants.calculerMensulaiteCredit(produitImmobilier.getPrix().doubleValue() - this.apport, dureeCredit, taeg));
+                CommonConstants.calculerMensulaiteCredit(produitImmobilier.getPrix().doubleValue(), dureeCredit, taeg, this.apport, false));
         return resultatLmnpDto;
     }
 }

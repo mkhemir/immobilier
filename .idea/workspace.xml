@@ -20,16 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ac936a-b212-4f42-8c8e-af77549cd3fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/exceptions/PinelException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiDenormandieCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiDenormandieCalcul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiLmnpCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiLmnpCalcul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiMalrauxCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiMalrauxCalcul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiMhCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiMhCalcul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLmnpDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatLmnpDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatMalrauxDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatMalrauxDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatMhDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatMhDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiPinelCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiPinelCalcul.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ProduitImmobilierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ProduitImmobilierDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/AuditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/AuditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/LmnpConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/LmnpConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/BouvardConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/BouvardConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/CommonConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/CommonConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/InfoTmi.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/InfoTmi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +74,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588438648750" />

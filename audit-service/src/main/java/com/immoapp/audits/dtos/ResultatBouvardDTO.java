@@ -10,8 +10,9 @@ ResultatBouvardDTO {
 
     private double montantTvaRecuperee;
     private double EconomyImpots;
+    private double gainImpots9Ans;
     private double effortEpargne;
-    private double effortEpargneTvaIncluse;
+    private double effortEpargneSansTVA;
 
 
 }

@@ -120,4 +120,10 @@ public class ProduitImmobilier {
     @Column(name = "LOYER_ESTIME")
     private double loyerEstime;
 
+    @Column(name = "COUT_TRAVAUX")
+    private double coutTravaux;
+
+    @Column(name = "EST_NEUF")
+    private boolean estNeuf;
+
 }

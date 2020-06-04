@@ -13,10 +13,11 @@ public class LoiMhCalcul {
         ResultatMhDTO resultatMhDTO = new ResultatMhDTO();
         InfoTmi infoTmiInv = new InfoTmi(revenus + (produitImmobilierDTO.getLoyerEstime() * 12), estCouple, nbrEnfants);
         InfoTmi infoTmiHab = new InfoTmi(revenus, estCouple, nbrEnfants);
+        double mensualitesCredit = CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue() +
+                produitImmobilierDTO.getCoutTravaux(), dureeCredit, taeg, apport, produitImmobilierDTO.isEstNeuf());
         resultatMhDTO.setTmiInv(infoTmiInv.getTmi());
         resultatMhDTO.setTmiHab(infoTmiHab.getTmi());
-        resultatMhDTO.setMensualiteCredit(CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue()
-                + produitImmobilierDTO.getCoutTravaux(), dureeCredit, taeg));
+        resultatMhDTO.setMensualiteCredit(mensualitesCredit);
         resultatMhDTO.setDureeTravaux(MalrauxConstants.DUREE_TRAVAUX_MAX);
         resultatMhDTO.setCoutTravaux(produitImmobilierDTO.getCoutTravaux());
         resultatMhDTO.setEconomyImpotsInvest(calculerEconomyImpots(infoTmiInv.getImpots(),
@@ -27,12 +28,10 @@ public class LoiMhCalcul {
           pour les lois malraux et monument historique
          */
         resultatMhDTO.setEffortEpargne(resultatMhDTO.getEconomyImpotsInvest() / dureeCredit + produitImmobilierDTO.getLoyerEstime()
-        - CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue() +
-                produitImmobilierDTO.getCoutTravaux() - apport, dureeCredit, taeg));
+        - mensualitesCredit);
 
         resultatMhDTO.setMoyenneEffortEpargneHabit(resultatMhDTO.getEconomyImpotsHabit() / dureeCredit + produitImmobilierDTO.getLoyerEstime()
-        - CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue() +
-                produitImmobilierDTO.getCoutTravaux() - apport, dureeCredit, taeg));
+        - mensualitesCredit);
 
         return resultatMhDTO;
     }

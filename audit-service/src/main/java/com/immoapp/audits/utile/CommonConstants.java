@@ -17,9 +17,16 @@ public class CommonConstants {
     public final static double COEFF_PRIX_HT = 1.2;
     public final static double PRELEVEMENT_SOCIAUX = 0.155;
     public final static double SALAIRE_DEFAUT = 50000;
+    public final static double COEFF_FN_ANCIEN = 0.08;
 
+    public static double calculerMontantEmprunt(double prixAchat, Double apport, boolean estNeuf) {
+        double coef = estNeuf ? PinelConstants.COEFF_FN : COEFF_FN_ANCIEN;
+        apport = apport != null ? apport : prixAchat * PinelConstants.COEFF_APPORT_DEFAULT;
+        return prixAchat + (prixAchat * coef) - apport;
+    }
 
-    public static double calculerMensulaiteCredit(double montantEmprunt, Integer dureeCredit, Double taeg) {
+    public static double calculerMensulaiteCredit(double prixAchat, Integer dureeCredit, Double taeg, double apport, boolean estNeuf) {
+        double montantEmprunt = calculerMontantEmprunt(prixAchat, apport, estNeuf);
         double coefTaegBrut = taeg != null ? taeg : TAEG;
         dureeCredit = dureeCredit != null ? dureeCredit : DEFAULT_DUREE_CREDIT;
         double coef = coefTaegBrut / 12;

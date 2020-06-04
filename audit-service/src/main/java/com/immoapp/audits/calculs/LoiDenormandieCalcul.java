@@ -10,10 +10,10 @@ public class LoiDenormandieCalcul {
     private ProduitImmobilierDTO produitImmobilierDTO;
 
     public LoiDenormandieCalcul(ResultatDenormandieDTO denormandie, double montantCredit, int dureeCredit, double taeg,
-                                ProduitImmobilierDTO produit) {
+                                ProduitImmobilierDTO produit, double apport) {
         this.denormandie = denormandie;
         this.produitImmobilierDTO = produit;
-        denormandie.setMensualiteCredit(CommonConstants.calculerMensulaiteCredit(montantCredit, dureeCredit, taeg));
+        denormandie.setMensualiteCredit(CommonConstants.calculerMensulaiteCredit(montantCredit, dureeCredit, taeg, apport, false));
     }
 
     public double calculerReductionImpots9Ans() {
