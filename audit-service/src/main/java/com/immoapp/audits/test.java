@@ -33,7 +33,7 @@ public class test {
 
 
         AuditService auditService = new AuditService();
-        DeficitFoncierDTO df = auditService.getDeficitFincier(produitImmobilierDTO, false, 0,50000, 300, 0.015);
+        DeficitFoncierDTO df = auditService.getDeficitFincier(produitImmobilierDTO, false, 0,50000, 300, 0.015, 20000);
         logger.info("+++++++++++"+df.getEffortEpargne());
         logger.info("+++++++++++"+df.getDeficit());
         logger.info("+++++++++++"+Math.ceil(9.4));

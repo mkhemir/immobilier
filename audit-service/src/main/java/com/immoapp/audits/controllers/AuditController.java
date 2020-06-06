@@ -58,8 +58,9 @@ public class AuditController {
     @CrossOrigin
     public DossierSimulationDTO getSimulation(@PathVariable(value = "id") Long id) {
         DossierSimulationDTO dossierSimulationDTO = new DossierSimulationDTO();
-        double salaire = 2500;
         double revenus = 50000; //TOFIX
+        boolean estCouple = false;
+        int nbrEnfants = 0;
         ProduitImmobilierDTO produitImmobilierDTO = dbService.getProduitImmobilierById(id);
         double apport = CommonConstants.checkApprt(produitImmobilierDTO);
         int dureeCredit = CommonConstants.checkDureeCredit();
@@ -69,12 +70,12 @@ public class AuditController {
         dossierSimulationDTO.setResultatLoiPinel6DTO(auditService.getPinel(TypePinel.PINEL6ANS, produitImmobilierDTO, apport, dureeCredit, taeg));
         dossierSimulationDTO.setResultatLoiPinel9DTO(auditService.getPinel(TypePinel.PINEL9ANS, produitImmobilierDTO, apport, dureeCredit, taeg));
         dossierSimulationDTO.setResultatLoiPinel12DTO(auditService.getPinel(TypePinel.PINEL12ANS, produitImmobilierDTO, apport, dureeCredit, taeg));
-        dossierSimulationDTO.setResultatLmnpReelDto(auditService.getLmnpReel(produitImmobilierDTO, taeg));
-        dossierSimulationDTO.setResultatLmnpMicroDto(auditService.getLmnpMicro(produitImmobilierDTO, taeg));
-        dossierSimulationDTO.setResultatBouvardDTO(auditService.getBouvard(produitImmobilierDTO, dureeCredit, taeg));
-        dossierSimulationDTO.setResultatMalrauxDTO(auditService.getMalraux(produitImmobilierDTO, dureeCredit, taeg));
-        dossierSimulationDTO.setResultatMhDto(auditService.getMh(produitImmobilierDTO, dureeCredit, taeg, salaire));
-        dossierSimulationDTO.setDeficitFoncierDTO(auditService.getDeficitFincier(produitImmobilierDTO, false , 0, revenus, dureeCredit, taeg));
+        dossierSimulationDTO.setResultatLmnpReelDto(auditService.getLmnpReel(produitImmobilierDTO, taeg, apport, revenus, estCouple, nbrEnfants,dureeCredit));
+        dossierSimulationDTO.setResultatLmnpMicroDto(auditService.getLmnpMicro(produitImmobilierDTO, taeg, apport, revenus, estCouple, nbrEnfants,dureeCredit));
+        dossierSimulationDTO.setResultatBouvardDTO(auditService.getBouvard(produitImmobilierDTO, dureeCredit, taeg, apport));
+        dossierSimulationDTO.setResultatMalrauxDTO(auditService.getMalraux(produitImmobilierDTO, dureeCredit, taeg, apport, revenus, estCouple, nbrEnfants));
+        dossierSimulationDTO.setResultatMhDto(auditService.getMh(produitImmobilierDTO, dureeCredit, taeg, revenus, estCouple, nbrEnfants, apport));
+        dossierSimulationDTO.setDeficitFoncierDTO(auditService.getDeficitFincier(produitImmobilierDTO, false , 0, revenus, dureeCredit, taeg, apport));
         return dossierSimulationDTO;
     }
 

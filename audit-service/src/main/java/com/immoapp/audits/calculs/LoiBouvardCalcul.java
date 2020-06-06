@@ -15,8 +15,8 @@ public class LoiBouvardCalcul {
     }
 
     public double calculerEffortEpagneSansTVA(ProduitImmobilierDTO produitImmobilierDTO, Integer dureeCredit, double taeg, double apport) {
-        return CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit, taeg, apport, true)
-                - calculerEconomyImpots(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit) - produitImmobilierDTO.getLoyerEstime();
+        return  calculerEconomyImpots(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit) + produitImmobilierDTO.getLoyerEstime()
+                - CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit, taeg, apport, true);
     }
 
     public double calculerEffortEpagne(ProduitImmobilierDTO produitImmobilierDTO, Integer dureeCredit, double taeg, double apport) {

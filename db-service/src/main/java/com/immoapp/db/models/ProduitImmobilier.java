@@ -126,4 +126,10 @@ public class ProduitImmobilier {
     @Column(name = "EST_NEUF")
     private boolean estNeuf;
 
+    @Column(name = "SITE_PSMV")
+    private boolean estSitePSMV;
+
+    @Column(name = "SITE_PVAP")
+    private boolean estSitePVAP;
+
 }
