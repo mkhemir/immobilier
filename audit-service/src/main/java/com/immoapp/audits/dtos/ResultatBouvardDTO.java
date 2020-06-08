@@ -5,14 +5,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class
-ResultatBouvardDTO {
+public class ResultatBouvardDTO {
 
     private double montantTvaRecuperee;
     private double EconomyImpots;
     private double gainImpots9Ans;
     private double effortEpargne;
     private double effortEpargneSansTVA;
-
-
 }

@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ac936a-b212-4f42-8c8e-af77549cd3fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/LoiBouvardCalcul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/controllers/AuditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/controllers/AuditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ProduitImmobilier.java" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/java/com/immoapp/db/models/ProduitImmobilier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ResultatBouvardDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
