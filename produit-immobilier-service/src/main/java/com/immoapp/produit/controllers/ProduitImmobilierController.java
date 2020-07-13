@@ -25,7 +25,7 @@ public class ProduitImmobilierController {
 
     private static final Logger logger = LoggerFactory.getLogger(ProduitImmobilierController.class);
     @PostMapping(value = "/produits",consumes = {"text/plain;charset=UTF-8", MediaType.APPLICATION_JSON_VALUE})
-   @CrossOrigin(origins = "*", allowedHeaders = "*")
+ //  @CrossOrigin(origins = "*", allowedHeaders = "*")
     public Search welcome(@RequestBody Search search){
         logger.info("...................................................CONTROLLER PRODUITIMMOBILIERSERVICE CA PASSE");
 
@@ -39,7 +39,7 @@ public class ProduitImmobilierController {
     }
 
     @PostMapping(value = "/ajout")
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
+  //  @CrossOrigin(origins = "*", allowedHeaders = "*")
     public void saveProduct(@RequestBody ProduitImmobilierDTO produitImmobilierDTO){
         logger.info("++++++++++++++++++++++++++++++++++++++++++++reaching it");
 

@@ -29,24 +29,25 @@ public class AuditService {
     public ResultatLoiPinelDTO getPinel(TypePinel typePinel, ProduitImmobilierDTO p, double apport, Integer dureeCredit, Double taeg) {
         ResultatLoiPinelDTO resultatLoiPinelDTO = new ResultatLoiPinelDTO();
         LoiPinelCalcul loiPinelCalcul = new LoiPinelCalcul();
-        resultatLoiPinelDTO.setLoyerMaximum(loiPinelCalcul.calculerLoyerMax(p));
-        resultatLoiPinelDTO.setReductionImpots(loiPinelCalcul.calculerReductionImpots(p, typePinel).doubleValue());
-        resultatLoiPinelDTO.setMontantEmprunt(loiPinelCalcul.calculerMontantEmprunt(p.getPrix().doubleValue(), apport));
-        resultatLoiPinelDTO.setEconomyImpots(loiPinelCalcul.calculerEconomieImpot(p.getPrix().doubleValue(), typePinel, PinelConstants.NBR_ANNEE));
-        resultatLoiPinelDTO.setMensualiteCredit(loiPinelCalcul.calculerMensulaiteCredit(resultatLoiPinelDTO.getMontantEmprunt(), dureeCredit, taeg));
-        resultatLoiPinelDTO.setFraisAnnexe(resultatLoiPinelDTO.getLoyerMaximum() / 4);
-        resultatLoiPinelDTO.setEffortEpargne(loiPinelCalcul.calculerEffortEpargne(p, typePinel, dureeCredit, apport, taeg, PinelConstants.NBR_ANNEE));
+        resultatLoiPinelDTO.setLoyerMaximum(adaptNumber(loiPinelCalcul.calculerLoyerMax(p)));
+        resultatLoiPinelDTO.setReductionImpots(adaptNumber(loiPinelCalcul.calculerReductionImpots(p, typePinel).doubleValue()));
+        resultatLoiPinelDTO.setMontantEmprunt(adaptNumber(CommonConstants.calculerMontantEmprunt(p.getPrix().doubleValue(), apport, p.isEstNeuf())));
+        resultatLoiPinelDTO.setEconomyImpots(adaptNumber(loiPinelCalcul.calculerEconomieImpot(p.getPrix().doubleValue(), typePinel, PinelConstants.NBR_ANNEE)));
+        resultatLoiPinelDTO.setMensualiteCredit(adaptNumber(CommonConstants.calculerMensulaiteCredit(resultatLoiPinelDTO.getMontantEmprunt(), dureeCredit, taeg, apport, p.isEstNeuf())));
+        resultatLoiPinelDTO.setFraisAnnexe(adaptNumber(resultatLoiPinelDTO.getLoyerMaximum() / 4));
+        resultatLoiPinelDTO.setEffortEpargne(adaptNumber(loiPinelCalcul.calculerEffortEpargne(p, typePinel, dureeCredit, apport, taeg)));
         return resultatLoiPinelDTO;
     }
 
     public ResultatBouvardDTO getBouvard(ProduitImmobilierDTO produitImmobilierDTO, Integer dureeCredit, double taeg, double apport) {
-        LoiBouvardCalcul loiBouvardCalcul = new LoiBouvardCalcul();
+        LoiBouvardCalcul loiBouvardCalcul = new LoiBouvardCalcul(produitImmobilierDTO, dureeCredit, taeg, apport);
         ResultatBouvardDTO resultatBouvardDTO = new ResultatBouvardDTO();
-        resultatBouvardDTO.setEconomyImpots(loiBouvardCalcul.calculerEconomyImpots(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit));
-        resultatBouvardDTO.setGainImpots9Ans(CommonConstants.getPrixHT(produitImmobilierDTO.getPrix().doubleValue()) * BouvardConstants.COEFF_REDUCTION);
-        resultatBouvardDTO.setMontantTvaRecuperee(loiBouvardCalcul.calculerTvaRecuperee(produitImmobilierDTO.getPrix().doubleValue()));
-        resultatBouvardDTO.setEffortEpargne(loiBouvardCalcul.calculerEffortEpagne(produitImmobilierDTO, dureeCredit, taeg, apport));
-        resultatBouvardDTO.setEffortEpargneSansTVA(loiBouvardCalcul.calculerEffortEpagneSansTVA(produitImmobilierDTO, dureeCredit, taeg, apport));
+        resultatBouvardDTO.setMensualiteCredit(adaptNumber(loiBouvardCalcul.getMensualiteCredit()));
+        resultatBouvardDTO.setEconomyImpots(adaptNumber(loiBouvardCalcul.calculerEconomyImpots(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit)));
+        resultatBouvardDTO.setGainImpots9Ans(adaptNumber(CommonConstants.getPrixHT(produitImmobilierDTO.getPrix().doubleValue()) * BouvardConstants.COEFF_REDUCTION));
+        resultatBouvardDTO.setMontantTvaRecuperee(adaptNumber(loiBouvardCalcul.calculerTvaRecuperee(produitImmobilierDTO.getPrix().doubleValue())));
+        resultatBouvardDTO.setEffortEpargne(adaptNumber(loiBouvardCalcul.calculerEffortEpagne(produitImmobilierDTO, dureeCredit, taeg, apport)));
+        resultatBouvardDTO.setEffortEpargneSansTVA(adaptNumber(loiBouvardCalcul.calculerEffortEpagneSansTVA(produitImmobilierDTO, dureeCredit, taeg, apport)));
         return resultatBouvardDTO;
     }
 
@@ -81,17 +82,20 @@ public class AuditService {
         LoiDfCalcul loiDf = new LoiDfCalcul(revenus, estCouple, nbreEnfants, deficitFoncierDTO);
         Map<Integer, Double> mapDeficits = new HashMap<>();
         int currentYear = CommonConstants.getCurrentYear();
-        deficitFoncierDTO.setChargesNonFinanciere((produitImmobilierDTO.getCoutTravaux() * 12) / dureeCredit);
-        deficitFoncierDTO.setInteretEmprunt(CommonConstants.getInteretEmprunt(produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux(), taeg));
-        deficitFoncierDTO.setRevenusLoyer(produitImmobilierDTO.getLoyerEstime() * 12);
+        deficitFoncierDTO.setChargesNonFinanciere(adaptNumber((produitImmobilierDTO.getCoutTravaux() * 12) / dureeCredit));
+        deficitFoncierDTO.setInteretEmprunt(adaptNumber(CommonConstants.getInteretEmprunt(produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux(), taeg)));
+        deficitFoncierDTO.setRevenusLoyer(adaptNumber(produitImmobilierDTO.getLoyerEstime() * 12));
         double economyImpots = loiDf.calculerEconoImpots(produitImmobilierDTO.getLoyerEstime() * 12, deficitFoncierDTO.getInteretEmprunt(),
                 deficitFoncierDTO.getChargesNonFinanciere(), revenus, estCouple, nbreEnfants);
-        deficitFoncierDTO.setEconomyImpots(economyImpots);
-        deficitFoncierDTO.setEffortEpargne(produitImmobilierDTO.getLoyerEstime() + economyImpots -
-                CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux() , dureeCredit, taeg, apport, false));
+        deficitFoncierDTO.setEconomyImpots(adaptNumber(economyImpots));
+        double mensualiteCredit = CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue()
+                + produitImmobilierDTO.getCoutTravaux() , dureeCredit, taeg, apport, false);
+        deficitFoncierDTO.setMensualiteCredit(adaptNumber(mensualiteCredit));
+        deficitFoncierDTO.setEffortEpargne(adaptNumber(produitImmobilierDTO.getLoyerEstime() + economyImpots
+                - mensualiteCredit));
         for (int i = currentYear; i < currentYear + 5; i++) {
-            mapDeficits.put(i, loiDf.calculerDeficitFoncier(deficitFoncierDTO.getRevenusLoyer(),
-                    deficitFoncierDTO.getInteretEmprunt(), deficitFoncierDTO.getChargesNonFinanciere()));
+            mapDeficits.put(i, adaptNumber(loiDf.calculerDeficitFoncier(deficitFoncierDTO.getRevenusLoyer(),
+                    deficitFoncierDTO.getInteretEmprunt(), deficitFoncierDTO.getChargesNonFinanciere())));
         }
         deficitFoncierDTO.setGainImpots(mapDeficits);
         return deficitFoncierDTO;
@@ -105,6 +109,10 @@ public class AuditService {
         denormandieCalcul.calculerEffortEpargne(tmi);
         return denormandie;
 
+    }
+
+    public double adaptNumber(double n) {
+        return Math.round(n * 100.0) / 100.0;
     }
 
 }

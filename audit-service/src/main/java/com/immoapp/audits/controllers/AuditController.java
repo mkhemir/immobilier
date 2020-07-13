@@ -30,7 +30,7 @@ public class AuditController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuditController.class);
 
-    @CrossOrigin
+   // @CrossOrigin
     @GetMapping(value = "/dossiers")
     public List<DossierSimulationDTO> getImmobilierMessage() {
         String msg = "le produit immobilier a dit : ";
@@ -55,7 +55,7 @@ public class AuditController {
 
     @GetMapping(value = "/dossier/{id}",consumes = {"text/plain;charset=UTF-8", MediaType.APPLICATION_JSON_VALUE})
    // @CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "*")
-    @CrossOrigin
+    //@CrossOrigin
     public DossierSimulationDTO getSimulation(@PathVariable(value = "id") Long id) {
         DossierSimulationDTO dossierSimulationDTO = new DossierSimulationDTO();
         double revenus = 50000; //TOFIX

@@ -23,7 +23,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
+ /*   @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurerAdapter() {
             @Override
@@ -36,6 +36,6 @@ public class Application {
                         .allowCredentials(true);
             }
         };
-    }
+    }*/
 }
 

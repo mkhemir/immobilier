@@ -15,7 +15,7 @@ public class BanqueController {
 
     private static final Logger logger = LoggerFactory.getLogger(BanqueController.class);
 
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
+  //  @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/banques")
     public List<InformationBanqueDTO> getImmobilierMessage() {
         List<InformationBanqueDTO> listBanques = new ArrayList<>();

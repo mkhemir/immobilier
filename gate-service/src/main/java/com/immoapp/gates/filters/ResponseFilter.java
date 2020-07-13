@@ -40,7 +40,10 @@ public class ResponseFilter extends ZuulFilter{
         ctx.getResponse().addHeader(FilterUtils.CORRELATION_ID, filterUtils.getCorrelationId());
 
         logger.debug("Completing outgoing request for {}.", ctx.getRequest().getRequestURI());
-
+        logger.debug("before filtering .......................", ctx.getResponse().getHeaderNames());
+        ctx.getResponse().getHeaderNames()
+                .removeIf(ssp -> ssp.toLowerCase().startsWith("access-control-allow"));
+        logger.debug("qfter filtering .......................", ctx.getResponse().getHeaderNames());
         return null;
     }
 }

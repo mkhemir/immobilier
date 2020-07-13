@@ -4,6 +4,7 @@ import com.immoapp.audits.controllers.AuditController;
 import com.immoapp.audits.dtos.ProduitImmobilierDTO;
 import com.immoapp.audits.enums.TypePinel;
 import com.immoapp.audits.exceptions.PinelException;
+import com.immoapp.audits.utile.CommonConstants;
 import com.immoapp.audits.utile.PinelConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,24 +40,11 @@ public class LoiPinelCalcul {
         return PinelConstants.BAREME_PINEL_A;
     }
 
-    public double calculerMontantEmprunt(double prixAchat, Double apport) {
-        apport = apport != null ? apport : prixAchat * PinelConstants.COEFF_APPORT_DEFAULT;
-        return prixAchat + (prixAchat * PinelConstants.COEFF_FN) - apport;
-    }
-
-    public double calculerMensulaiteCredit(double montantEmprunt, Integer dureeCredit, Double taeg) {
-        double coefTaegBrut = taeg != 0.0 ? taeg : PinelConstants.TAEG;
-        dureeCredit = dureeCredit != null ? dureeCredit : PinelConstants.DEFAULT_DUREE_CREDIT;
-       // double coef = (coefTaegBrut + PinelConstants.COEF_ASS) / 12;
-        double coef = coefTaegBrut / 12;
-        logger.info("MSC:"+(montantEmprunt * coef) / (1 - Math.pow(1 + coef, -dureeCredit)));
-        return (montantEmprunt * coef) / (1 - Math.pow(1 + coef, -dureeCredit));
-    }
 
     public double calculerEconomieImpot(double prixAchat, TypePinel pinel, int annee) {
-        double coeffImpots = annee <= 9 ? 0.02 : 0.0175;
+        double coeffImpots = annee <= 9 ? 0.02 : 0.01;
         double totalAchat = getFraisNotaire(prixAchat) + prixAchat;
-        return ((totalAchat * coeffImpots));
+        return ((totalAchat * coeffImpots)) / 12;
     }
 
     public double getFraisNotaire(double prixAchat) {
@@ -78,22 +66,25 @@ public class LoiPinelCalcul {
     }
 
     //TOFIX enlever les frais comme dans les autres lois
-    public double calculerEffortEpargne(ProduitImmobilierDTO produitImmobilierDTO, TypePinel pinel, Integer dureeCredit, Double apport, Double taeg, int annee) {
+    public double calculerEffortEpargne(ProduitImmobilierDTO produitImmobilierDTO, TypePinel pinel, Integer dureeCredit, Double apport, Double taeg) {
         double loyerMax = calculerLoyerMax(produitImmobilierDTO);
         double loyerMoyen = 0.0;
-        double montantEmprunt = calculerMontantEmprunt(produitImmobilierDTO.getPrix().doubleValue(), apport);
       /*  double economyImpots = pinel == TypePinel.PINEL12ANS ? ((calculerEconomieImpot(produitImmobilierDTO.getPrix().doubleValue(), pinel, 9) * 9)
                 + (calculerEconomieImpot(produitImmobilierDTO.getPrix().doubleValue(), pinel, 12) * 3)) / 144 :
                 calculerEconomieImpot(produitImmobilierDTO.getPrix().doubleValue(), pinel, 6) / 12;*/
         double economyImpots = pinel == TypePinel.PINEL6ANS || pinel == TypePinel.PINEL9ANS ? calculerEconomieImpot(produitImmobilierDTO.getPrix().doubleValue(), pinel, 6) :
                 calculerEconomieImpot(produitImmobilierDTO.getPrix().doubleValue(), pinel, 12);
 
-        double mensualiteCredits = calculerMensulaiteCredit(montantEmprunt, dureeCredit, taeg);
+        double mensualiteCredits = CommonConstants.calculerMensulaiteCredit(produitImmobilierDTO.getPrix().doubleValue(), dureeCredit, taeg, apport , produitImmobilierDTO.isEstNeuf());
         double fraisAnnexe = loyerMoyen / 4;
         try {
             loyerMoyen = calculerLoyerSurPeriodeCredit(produitImmobilierDTO, loyerMax, pinel, dureeCredit);
         } catch (PinelException p) {
         }
+        logger.info("loyer estime"+produitImmobilierDTO.getLoyerEstime());
+        logger.info("mensualiteCredits"+ mensualiteCredits);
+        logger.info("economy"+ ( economyImpots ));
+        logger.info("loyer moyen"+loyerMoyen);
         return (loyerMoyen + economyImpots - mensualiteCredits); // - fraisAnnexe);
     }
 }

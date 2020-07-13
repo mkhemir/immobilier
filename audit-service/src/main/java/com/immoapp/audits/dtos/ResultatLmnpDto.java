@@ -19,5 +19,6 @@ public class ResultatLmnpDto {
     private double Resultat;
     private double economyImpots;
     private double effortEpargne;
+    private double mensualiteCredit;
 
 }

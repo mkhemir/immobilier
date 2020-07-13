@@ -1,122 +1,149 @@
-version: '2.4'
-services:
-  eurekaserver:
-    image:   immoapp/immo-eurekasvr:taxes
-    mem_limit: 1073741824
-    ports:
-      - "8761:8761"
-  configserver:
-    image: immoapp/immo-confsvr:taxes
-    mem_limit: 1073741824
-    ports:
-      - "8888:8888"
-    environment:
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT: "8761"
-      ENCRYPT_KEY:       "IMSYMMETRIC"
-  gateservice:
-    image: immoapp/immo-gate:taxes
-    mem_limit: 1073741824
-    ports:
-      - "5555:5555"
-    environment:
-      PROFILE: "default"
-      SERVER_PORT: "5555"
-      CONFIGSERVER_URI: "http://configserver:8888"
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT:        "8761"
-      DATABASESERVER_PORT:      "5432"
-      CONFIGSERVER_PORT:        "8888"
-      AUDIT_PORT:               "8087"
-      DB_PORT:                  "8930"
-  database:
-    image: postgres:9.5
-    mem_limit: 1073741824
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=Esprit292948
-      - POSTGRES_DB=immo_db_local
-  optimisationfiscaleservice:
-    image: immoapp/optimisation-fiscale-service:taxes
-    mem_limit: 1073741824
-    ports:
-      - "8080:8080"
-    environment:
-      PROFILE: "default"
-      SERVER_PORT: "8080"
-      CONFIGSERVER_URI: "http://configserver:8888"
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT:        "8761"
-      DATABASESERVER_PORT:      "5432"
-      CONFIGSERVER_PORT:        "8888"
-      AUDIT_PORT:               "8087"
-      ZUULSERVER_PORT:          "5555"
-      ENCRYPT_KEY:       "IMSYMMETRIC"
-  produitimmobilierservice:
-    image: immoapp/produit-immobilier-service:taxes
-    mem_limit: 1073741824
-    ports:
-      - "8085:8085"
-    environment:
-      PROFILE: "default"
-      SERVER_PORT: "8085"
-      CONFIGSERVER_URI: "http://configserver:8888"
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT:        "8761"
-      DATABASESERVER_PORT:      "5432"
-      CONFIGSERVER_PORT:        "8888"
-      AUDIT_PORT:               "8087"
-      ZUULSERVER_PORT:          "5555"
-      ENCRYPT_KEY:       "IMSYMMETRIC"
-  auditservice:
-    image: immoapp/audit-service:taxes
-    mem_limit: 1073741824
-    ports:
-      - "8087:8087"
-    environment:
-      PROFILE: "default"
-      SERVER_PORT: "8087"
-      CONFIGSERVER_URI: "http://configserver:8888"
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT:        "8761"
-      DATABASESERVER_PORT:      "5432"
-      CONFIGSERVER_PORT:        "8888"
-      PRODUITIMMOBILIER_PORT:   "8085"
-      DB_PORT:                  "8930"
-      ZUULSERVER_PORT:          "5555"
-      ENCRYPT_KEY:       "IMSYMMETRIC"
-  specialroutes-service:
-    image: immoapp/specialroutes-service:taxes
-    mem_limit: 1073741824
-    ports:
-      - "8910:8910"
-    environment:
-      PROFILE: "default"
-      SERVER_PORT: "8910"
-      CONFIGSERVER_URI: "http://configserver:8888"
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT:        "8761"
-      DATABASESERVER_PORT:      "5432"
-      CONFIGSERVER_PORT:        "8888"
-      ENCRYPT_KEY:       "IMSYMMETRIC"
-  db-service:
-    image: immoapp/db-service:taxes
-    mem_limit: 1073741824
-    ports:
-      - "8930:8930"
-    environment:
-      PROFILE: "default"
-      SERVER_PORT: "8930"
-      CONFIGSERVER_URI: "http://configserver:8888"
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT:        "8761"
-      DATABASESERVER_PORT:      "5432"
-      CONFIGSERVER_PORT:        "8888"
-      ZUULSERVER_PORT:          "5555"
-      ENCRYPT_KEY:       "IMSYMMETRIC"
-
+eurekaserver:
+  image:   984907864453.dkr.ecr.eu-west-3.amazonaws.com/immoapp/immo-eurekasvr:taxes
+  mem_limit: 1073741824
+  ports:
+    - "8761:8761"
+configserver:
+  image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immoapp/immo-confsvr:taxes
+  mem_limit: 1073741824
+  ports:
+    - "8888:8888"
+  links:
+    - "eurekaserver:eurekaserver"
+  environment:
+    EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+    EUREKASERVER_PORT: "8761"
+    ENCRYPT_KEY:       "IMSYMMETRIC"
+gateservice:
+  image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immoapp/immo-gate:taxes
+  mem_limit: 1073741824
+  ports:
+    - "5555:5555"
+  links:
+    - "configserver:configserver"
+    - "eurekaserver:eurekaserver"
+  environment:
+    PROFILE: "default"
+    SERVER_PORT: "5555"
+    CONFIGSERVER_URI: "http://configserver:8888"
+    EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+    EUREKASERVER_PORT:        "8761"
+    DATABASESERVER_PORT:      "5432"
+    CONFIGSERVER_PORT:        "8888"
+    AUDIT_PORT:               "8087"
+    DB_PORT:                  "8930"
+database:
+  image: postgres:9.5
+  mem_limit: 1073741824
+  ports:
+    - "5432:5432"
+  environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=Esprit292948
+    - POSTGRES_DB=immo_db_local
+optimisationfiscaleservice:
+  image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immoapp/optimisation-fiscale-service:taxes
+  mem_limit: 1073741824
+  ports:
+    - "8080:8080"
+  links:
+    - "configserver:configserver"
+    - "eurekaserver:eurekaserver"
+    - "gateservice:gateservice"
+    - "database:database"
+  environment:
+    PROFILE: "default"
+    SERVER_PORT: "8080"
+    CONFIGSERVER_URI: "http://configserver:8888"
+    EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+    EUREKASERVER_PORT:        "8761"
+    DATABASESERVER_PORT:      "5432"
+    CONFIGSERVER_PORT:        "8888"
+    AUDIT_PORT:               "8087"
+    ZUULSERVER_PORT:          "5555"
+    ENCRYPT_KEY:       "IMSYMMETRIC"
+produitimmobilierservice:
+  image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immoapp/produit-immobilier-service:taxes
+  mem_limit: 1073741824
+  ports:
+    - "8085:8085"
+  links:
+    - "configserver:configserver"
+    - "eurekaserver:eurekaserver"
+    - "gateservice:gateservice"
+    - "database:database"
+  environment:
+    PROFILE: "default"
+    SERVER_PORT: "8085"
+    CONFIGSERVER_URI: "http://configserver:8888"
+    EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+    EUREKASERVER_PORT:        "8761"
+    DATABASESERVER_PORT:      "5432"
+    CONFIGSERVER_PORT:        "8888"
+    AUDIT_PORT:               "8087"
+    ZUULSERVER_PORT:          "5555"
+    ENCRYPT_KEY:       "IMSYMMETRIC"
+auditservice:
+  image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immoapp/audit-service:taxes
+  mem_limit: 1073741824
+  ports:
+    - "8087:8087"
+  links:
+    - "configserver:configserver"
+    - "eurekaserver:eurekaserver"
+    - "gateservice:gateservice"
+    - "database:database"
+  environment:
+    PROFILE: "default"
+    SERVER_PORT: "8087"
+    CONFIGSERVER_URI: "http://configserver:8888"
+    EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+    EUREKASERVER_PORT:        "8761"
+    DATABASESERVER_PORT:      "5432"
+    CONFIGSERVER_PORT:        "8888"
+    PRODUITIMMOBILIER_PORT:   "8085"
+    DB_PORT:                  "8930"
+    ZUULSERVER_PORT:          "5555"
+    ENCRYPT_KEY:       "IMSYMMETRIC"
+specialroutes-service:
+  image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immoapp/specialroutes-service:taxes
+  mem_limit: 1073741824
+  ports:
+    - "8910:8910"
+  links:
+    - "configserver:configserver"
+    - "eurekaserver:eurekaserver"
+    - "gateservice:gateservice"
+    - "database:database"
+  environment:
+    PROFILE: "default"
+    SERVER_PORT: "8910"
+    CONFIGSERVER_URI: "http://configserver:8888"
+    EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+    EUREKASERVER_PORT:        "8761"
+    DATABASESERVER_PORT:      "5432"
+    CONFIGSERVER_PORT:        "8888"
+    ENCRYPT_KEY:       "IMSYMMETRIC"
+db-service:
+  image: 984907864453.dkr.ecr.eu-west-3.amazonaws.com/immoapp/db-service:taxes
+  mem_limit: 1073741824
+  ports:
+    - "8930:8930"
+  links:
+    - "configserver:configserver"
+    - "eurekaserver:eurekaserver"
+    - "gateservice:gateservice"
+    - "database:database"
+  environment:
+    PROFILE: "default"
+    SERVER_PORT: "8930"
+    CONFIGSERVER_URI: "http://configserver:8888"
+    EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+    EUREKASERVER_PORT:        "8761"
+    DATABASESERVER_PORT:      "5432"
+    CONFIGSERVER_PORT:        "8888"
+    ZUULSERVER_PORT:          "5555"
+    ENCRYPT_KEY:       "IMSYMMETRIC"
 
 
 

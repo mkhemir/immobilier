@@ -1,6 +1,8 @@
 package com.immoapp.audits;
 
 import com.immoapp.audits.calculs.LoiBouvardCalcul;
+import com.immoapp.audits.calculs.LoiLmnpCalcul;
+import com.immoapp.audits.calculs.LoiMalrauxCalcul;
 import com.immoapp.audits.calculs.LoiPinelCalcul;
 import com.immoapp.audits.dtos.DeficitFoncierDTO;
 import com.immoapp.audits.dtos.ProduitImmobilierDTO;
@@ -19,24 +21,21 @@ public class test {
     public static void main(String[] args) {
 
        // System.out.println(CommonConstants.calculerMensulaiteCredit(130000,300,0.0365));
-        LoiBouvardCalcul loiBouvardCalcul = new LoiBouvardCalcul();
+       // LoiBouvardCalcul loiBouvardCalcul = new LoiBouvardCalcul(p);
       //  System.out.println("+++"+loiBouvardCalcul.calculerEconomyImpots(130000));
         ProduitImmobilierDTO produitImmobilierDTO = new ProduitImmobilierDTO();
-        produitImmobilierDTO.setPrix(new BigDecimal(200000));
+        produitImmobilierDTO.setPrix(new BigDecimal(100000));
         produitImmobilierDTO.setSurface(40);
         produitImmobilierDTO.setCoutTravaux(120000);
-        produitImmobilierDTO.setLoyerEstime(900);
+        produitImmobilierDTO.setLoyerEstime(420);
         LoiPinelCalcul loiPinelCalcul = new LoiPinelCalcul();
-        loiPinelCalcul.calculerEffortEpargne(produitImmobilierDTO , TypePinel.PINEL6ANS, 240 , 0.0, 0.0, PinelConstants.NBR_ANNEE);
-        loiPinelCalcul.calculerMensulaiteCredit(120000,180,0.02);
+        loiPinelCalcul.calculerEffortEpargne(produitImmobilierDTO , TypePinel.PINEL6ANS, 240 , 0.0, 0.0);
+       // loiPinelCalcul.calculerMensulaiteCredit(120000,180,0.02);
      //   System.out.println("-- "+loiBouvardCalcul.calculerEffortEpagne(produitImmobilierDTO,300, 0.0365));
-
-
-        AuditService auditService = new AuditService();
-        DeficitFoncierDTO df = auditService.getDeficitFincier(produitImmobilierDTO, false, 0,50000, 300, 0.015, 20000);
-        logger.info("+++++++++++"+df.getEffortEpargne());
-        logger.info("+++++++++++"+df.getDeficit());
-        logger.info("+++++++++++"+Math.ceil(9.4));
+        LoiLmnpCalcul loiLmnpCalcul = new LoiLmnpCalcul(50000.0, false, 0, 5000, 0.0);
+        loiLmnpCalcul.getRegimeReel(produitImmobilierDTO, 0.04, 180);
+        LoiMalrauxCalcul loiMalrauxCalcul = new LoiMalrauxCalcul();
+        loiMalrauxCalcul.calculerLoiMalraux(produitImmobilierDTO, 240, 0.04, 0.0, 50000, false, 0);
     }
 
 

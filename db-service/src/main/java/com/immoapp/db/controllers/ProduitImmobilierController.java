@@ -16,7 +16,7 @@ public class ProduitImmobilierController {
     ProduitImmobilierService produitImmobilierService;
 
     private static final Logger logger = LoggerFactory.getLogger(ProduitImmobilierController.class);
-    @CrossOrigin
+  //  @CrossOrigin
     @GetMapping({"/produits"})
     public List<ProduitImmobilierDTO> findAll(){
         return produitImmobilierService.findAllProducts();
@@ -26,7 +26,7 @@ public class ProduitImmobilierController {
     public void addProduct(@RequestBody ProduitImmobilierDTO produitImmobilierDTO){
         produitImmobilierService.saveProduct(produitImmobilierDTO);
     }
-    @CrossOrigin
+   // @CrossOrigin
     @GetMapping({"/produit/{id}"})
     public ProduitImmobilierDTO findProduit(@PathVariable(value = "id") Long id){
         logger.info("///////////////////.............................. db a recu l'appel : "+id);

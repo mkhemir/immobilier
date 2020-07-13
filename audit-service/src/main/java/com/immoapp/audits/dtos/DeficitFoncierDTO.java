@@ -15,6 +15,7 @@ public class DeficitFoncierDTO {
     private double deficit;
     private double economyImpots;
     private double effortEpargne;
+    private double mensualiteCredit;
     private Map<Integer, Double> gainImpots;
     private Map<Integer, Double> listEffortEpargne;
 }

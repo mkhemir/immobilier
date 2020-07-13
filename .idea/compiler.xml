@@ -12,9 +12,9 @@
         <module name="optimisation-fiscale" />
         <module name="optimisation-fiscale-service" />
         <module name="audit" />
-        <module name="gate" />
-        <module name="confsvr" />
         <module name="configserver" />
+        <module name="confsvr" />
+        <module name="gate" />
         <module name="db-service" />
         <module name="produit-immobilier-service" />
       </profile>
