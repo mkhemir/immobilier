@@ -1,0 +1,17 @@
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+hystrix.command.default.execution.timeout.enabled: false
+
+
+amazonProperties:
+  endpointUrl: https://s3.eu-west-3.amazonaws.com
+  accessKey: AKIA6KUIVLGCRUGNVLOP
+  secretKey: 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
+  bucketName: immovation-bucket

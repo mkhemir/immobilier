@@ -9,13 +9,17 @@ import java.util.Map;
 @Setter
 public class DeficitFoncierDTO {
 
-    private double revenusLoyer;
+    private double totalRevenusFoncier;
+    private double montantEmprunt;
     private double interetEmprunt;
     private double chargesNonFinanciere;
     private double deficit;
     private double economyImpots;
     private double effortEpargne;
     private double mensualiteCredit;
+    private double totalImpotsApresReduction;
+    private double totalImpotsAvantReduction;
+    private int annee;
     private Map<Integer, Double> gainImpots;
     private Map<Integer, Double> listEffortEpargne;
 }

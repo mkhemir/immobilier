@@ -10,10 +10,15 @@ public class InfoTmi {
     private double tmi;
     private double ceilingAmount;
     private double impots;
+    double quotientFamilial;
+    double revenusFam;
 
     public InfoTmi(double revenus, boolean estCouple, int nbreEnfants) {
-        this.tmi = getTmi(revenus);
-        this.impots = getImpots(this.tmi, revenus, estCouple, nbreEnfants);
+        this.quotientFamilial = estCouple ? 2 + 0.5 * nbreEnfants : 1 + 0.5 * nbreEnfants;
+        this.revenusFam = revenus / quotientFamilial;
+        this.tmi = getTmi(this.revenusFam);
+        this.impots = getImpots(this.tmi, this.revenusFam, estCouple, nbreEnfants);
+
     }
 
     private double getTmi(double revenus) {
@@ -31,8 +36,6 @@ public class InfoTmi {
     }
 
     private double getImpots(double tmi, double revenus, boolean estCouple, int nbreEnfants) {
-        double quotientFamilial = estCouple ? 2 + 0.5 * nbreEnfants : 1 + 0.5 * nbreEnfants;
-        double revenusFam = revenus / quotientFamilial;
         if (tmi == 0) {
             return 10064;
         } else if (tmi == 0.11) {

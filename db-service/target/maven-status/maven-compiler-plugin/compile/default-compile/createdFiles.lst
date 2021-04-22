@@ -1,0 +1,7 @@
+com\immoapp\db\models\ProduitImmobilier.class
+com\immoapp\db\dtos\ProduitImmobilierDTO.class
+com\immoapp\db\repository\ProduitImmobilierRepository.class
+com\immoapp\db\models\ImageProduit.class
+com\immoapp\db\services\ProduitImmobilierService.class
+com\immoapp\db\controllers\ProduitImmobilierController.class
+com\immoapp\db\Application.class

@@ -3,6 +3,8 @@ package com.immoapp.audits.dtos;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 public class UserDTO {
@@ -15,9 +17,13 @@ public class UserDTO {
 
     private String email;
 
-    private double salaire;
+    private double revenusBrut;
 
     private boolean married;
 
     private int nbrEnfants;
+
+    private double apport;
+
+    private List<BienImmobilierDTO> autresBiens;
 }

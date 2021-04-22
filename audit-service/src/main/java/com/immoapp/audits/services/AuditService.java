@@ -84,7 +84,7 @@ public class AuditService {
         int currentYear = CommonConstants.getCurrentYear();
         deficitFoncierDTO.setChargesNonFinanciere(adaptNumber((produitImmobilierDTO.getCoutTravaux() * 12) / dureeCredit));
         deficitFoncierDTO.setInteretEmprunt(adaptNumber(CommonConstants.getInteretEmprunt(produitImmobilierDTO.getPrix().doubleValue() + produitImmobilierDTO.getCoutTravaux(), taeg)));
-        deficitFoncierDTO.setRevenusLoyer(adaptNumber(produitImmobilierDTO.getLoyerEstime() * 12));
+        deficitFoncierDTO.setTotalRevenusFoncier(adaptNumber(produitImmobilierDTO.getLoyerEstime() * 12));
         double economyImpots = loiDf.calculerEconoImpots(produitImmobilierDTO.getLoyerEstime() * 12, deficitFoncierDTO.getInteretEmprunt(),
                 deficitFoncierDTO.getChargesNonFinanciere(), revenus, estCouple, nbreEnfants);
         deficitFoncierDTO.setEconomyImpots(adaptNumber(economyImpots));
@@ -94,7 +94,7 @@ public class AuditService {
         deficitFoncierDTO.setEffortEpargne(adaptNumber(produitImmobilierDTO.getLoyerEstime() + economyImpots
                 - mensualiteCredit));
         for (int i = currentYear; i < currentYear + 5; i++) {
-            mapDeficits.put(i, adaptNumber(loiDf.calculerDeficitFoncier(deficitFoncierDTO.getRevenusLoyer(),
+            mapDeficits.put(i, adaptNumber(loiDf.calculerDeficitFoncier(deficitFoncierDTO.getTotalRevenusFoncier(),
                     deficitFoncierDTO.getInteretEmprunt(), deficitFoncierDTO.getChargesNonFinanciere())));
         }
         deficitFoncierDTO.setGainImpots(mapDeficits);
