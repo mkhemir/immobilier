@@ -1,0 +1,15 @@
+com\immoapp\authentication\service\CustomUserDetailsService.class
+com\immoapp\authentication\model\UserEntity.class
+com\immoapp\authentication\security\WebSecurityConfigurer.class
+com\immoapp\authentication\Application.class
+com\immoapp\authentication\repository\OrgUserRepository.class
+com\immoapp\authentication\config\CustomTokenEnhancer.class
+com\immoapp\authentication\config\ServiceConfig.class
+com\immoapp\authentication\InspectHeaderFilter.class
+com\immoapp\authentication\model\UserOrganization.class
+com\immoapp\authentication\repository\OAuthRepoImpl.class
+com\immoapp\authentication\repository\OAuthRepo.class
+com\immoapp\authentication\security\OAuth2Config.class
+com\immoapp\authentication\model\CustomUser.class
+com\immoapp\authentication\config\SecurityConfiguration.class
+com\immoapp\authentication\config\OAuth2Config.class

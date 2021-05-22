@@ -5,6 +5,7 @@ com\immoapp\audits\services\DbService.class
 com\immoapp\audits\calculs\LoiMhCalcul.class
 com\immoapp\audits\calculs\LoiPinelCalcul.class
 com\immoapp\audits\dtos\ResultatDenormandieDTO.class
+com\immoapp\audits\dtos\BienImmobilierDTO.class
 com\immoapp\audits\dtos\DeficitFoncierDTO.class
 com\immoapp\audits\services\DbService$1.class
 com\immoapp\audits\controllers\DiscoveryController.class
@@ -16,6 +17,7 @@ com\immoapp\audits\dtos\ResultatMalrauxDTO.class
 com\immoapp\audits\test.class
 com\immoapp\audits\dtos\AdresseDTO.class
 com\immoapp\audits\controllers\AuditController.class
+com\immoapp\audits\calculs\DfSimulation.class
 com\immoapp\audits\dtos\UserDTO.class
 com\immoapp\audits\calculs\LoiBouvardCalcul.class
 com\immoapp\audits\dtos\InformationBanqueDTO.class

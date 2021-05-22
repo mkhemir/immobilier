@@ -23,39 +23,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ac936a-b212-4f42-8c8e-af77549cd3fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/calculs/DfSimulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/BienImmobilierDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/authentication-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/docker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/docker/run.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/InspectHeaderFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/config/ServiceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/model/UserOrganization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/repository/OrgUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/security/OAuth2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/security/WebSecurityConfigurer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/config/CustomTokenEnhancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/config/OAuth2Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/model/CustomUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/model/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/repository/OAuthRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/repository/OAuthRepoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/service/CustomUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/DeficitFoncierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/DeficitFoncierDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ProduitImmobilierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/ProduitImmobilierDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/dtos/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/AuditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/services/AuditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/InfoTmi.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/immoapp/audits/utile/InfoTmi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/target/audit-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/target/audit-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/target/classes/com/immoapp/audits/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/target/classes/com/immoapp/audits/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/authentication-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/InspectHeaderFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/InspectHeaderFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/config/ServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/model/UserOrganization.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/model/UserOrganization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/repository/OrgUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/repository/OrgUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/security/OAuth2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/security/OAuth2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/thoughtmechanix/authentication/security/WebSecurityConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/immoapp/authentication/security/WebSecurityConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confsvr/target/configserver-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/target/configserver-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confsvr/target/configserver-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/target/configserver-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confsvr/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/confsvr/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-service/target/db-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/target/db-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekasvr/target/eurekasvr-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/eurekasvr/target/eurekasvr-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekasvr/target/eurekasvr-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/eurekasvr/target/eurekasvr-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekasvr/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eurekasvr/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate-service/target/gate-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/target/gate-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate-service/target/gate-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/target/gate-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gate-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/optimisation-fiscale-service/target/optimisation-fiscale-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/optimisation-fiscale-service/target/optimisation-fiscale-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/produit-immobilier-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/produit-immobilier-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produit-immobilier-service/target/produit-immobilier-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/produit-immobilier-service/target/produit-immobilier-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialroutes-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialroutes-service/target/specialroutesservice-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/target/specialroutesservice-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialroutes-service/target/specialroutesservice-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/specialroutes-service/target/specialroutesservice-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +78,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -90,8 +103,14 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="userSettingsFile" value="/etc/maven/settings.xml" />
+        <option name="mavenHome" value="$USER_HOME$/env/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\Users\marwe\env\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="11" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1S7ebAEkXxplkpIxTYuly1Ukfe0" />
@@ -111,11 +130,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588438648750" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ImvFront" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -432,5 +451,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

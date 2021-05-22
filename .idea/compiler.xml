@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="optimisation-fiscale-service" />
+        <module name="authentication-service" />
         <module name="optimisation-fiscale" />
         <module name="dbservice" />
         <module name="audit" />

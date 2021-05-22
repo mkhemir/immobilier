@@ -1,0 +1,60 @@
+
+#Setting the logging levels for the service
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.thoughtmechanix: DEBUG
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+#server:
+#  contextPath:   /auth
+
+config:
+  oauth2:
+    clientid: KGB
+    clientSecret: KGB
+    privateKey: -----BEGIN RSA PRIVATE KEY-----
+      MIIEowIBAAKCAQEAux+vaf2yImK0nTIF5ryDsOwD8DZvGJgVsYkz+E7wR8RcoRbJ
+      ywADpglZKNVUeKJ9FamYpTB7zLjQ7bgFxu+buSFEflF/0kq+Fs5pXhc2Ose7EKBc
+      kaQXYZ4LesvpFcp0wiBSpNtMLT2UKz6v5RFlTFSdD2Ry9cVTlLYPHA9jqUbHdikR
+      wD39H4TOJ/GPaXsyN/Keb1WfLov9OiK5Y0s6Xzb0OMSmqeOmCgwvRaJKUhIfp9Y2
+      vsubKJkBimjMvNIqKvY+5qyHHATK/SbSz5Vn5PHOnr032hfOHidYU9jNmQ0KSipN
+      SNasO6ODzVi3J3nTBvfaNJ/nbVr1ZjDWLnKtFQIDAQABAoIBADTac0J9zOXXeWp5
+      KZ+NmajMUSR1S5XnxyDZPxuguE+dEAjUFfVHsMAiHdPhxbU5OBl5SMtH0X/2p9St
+      SLxzC0oUMnN3c6IjSGPKs4pHBiM+LQE6OktMzOneqSFrHQ/xml8GoDE+W9rfbM12
+      LFqIOlOABsjFN49hyATWE5h6ZEz4XEQSgR9wNtiKcfcNpRy4+cM9y4R+e8szYVlD
+      gAZ6snjF3nZPw1ACtWFyGIbxdw0OLrTGWkSwp9mIibgDXWjHrzdTbVEvfw9Wi0Sh
+      pbTFc7ZRuk/mLRdtdpLpceHQqtvynmvpAvlF++l8GkxOlJQmVW290MU6E9iKStwB
+      7kN99OECgYEA4fdcIA3ML6AhjuT+Kvmzvlf07tQZSFzw7qm4fazn4j6NAg/LAM7o
+      2E1qPojdKkdj2c8yBkGiEErsZ9Diarl9v7fXmdMJOvUJ/UVkhJP6kghJw6g5Y7ty
+      4VyepH1+g6L3nhxkFM0nG6glSVyXmyp/AQzmrWvfhz5xIMbYoVyy3TkCgYEA0/6v
+      qgTZvf98xQPBOuMsFYMzSvplsxSblrGmThsrFgeEU32KSH6qruwd7FpUt9ea0V+z
+      WJgeA9EuQ3KstnRis61nE1FjwsVq0Kk9NGg7Fhb/WrIidFPTRJGgwUo5MvtVEz8/
+      uq9eHp0XM14rRFxO+rCvC/dGwc/RrbOmOrDqKr0CgYBqjC5+VsMuubzZGhTWwsME
+      P4kYjB4Xxus8Pf7mE3+LaJ8ol7XK/cVBKM+uCO7wHpVwgIg/9vap5AowsYfxduFa
+      Yx9gQugZSq2ZJP1OnlAKR6owfcQByMNUjE2plhrviwpjHVP7kviby985BlXeLl2Q
+      azriDvlpVgIVyG0hOQqF0QKBgQCvroWXCVQFL4APqQ/uJCr5XPQZ865qHO7fkDM4
+      0S0AoZQYuJXrhAUg1w3pO+avP97OGlf/WHivQx/qx1K4FXViX5ZnHPDmjUH6z/Wn
+      w6ULpl1RpQQGkR0o2uJ0rHUAeeZEAAtpQ0Flb1u1txl2GmVdPSSjbvXVUcr6/0EH
+      rGsypQKBgCxWwUkzanUs12+nLijJc1tamx+bRzln43CHtv+E+blGsUZjAInZwSMG
+      sE75Wjz6xh3GkqRTREkrr43HVqdpRhAcDoI0z3Vx6DF2XP+2hLOV80Hce1P+YJC1
+      c+4BINprDCViWri3QrZ6haa4wWWef5W1CtcMXNrPB/lw67qIP2W+
+      -----END RSA PRIVATE KEY-----
+    publicKey: -----BEGIN PUBLIC KEY-----
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAux+vaf2yImK0nTIF5ryD
+      sOwD8DZvGJgVsYkz+E7wR8RcoRbJywADpglZKNVUeKJ9FamYpTB7zLjQ7bgFxu+b
+      uSFEflF/0kq+Fs5pXhc2Ose7EKBckaQXYZ4LesvpFcp0wiBSpNtMLT2UKz6v5RFl
+      TFSdD2Ry9cVTlLYPHA9jqUbHdikRwD39H4TOJ/GPaXsyN/Keb1WfLov9OiK5Y0s6
+      Xzb0OMSmqeOmCgwvRaJKUhIfp9Y2vsubKJkBimjMvNIqKvY+5qyHHATK/SbSz5Vn
+      5PHOnr032hfOHidYU9jNmQ0KSipNSNasO6ODzVi3J3nTBvfaNJ/nbVr1ZjDWLnKt
+      FQIDAQAB
+      -----END PUBLIC KEY-----

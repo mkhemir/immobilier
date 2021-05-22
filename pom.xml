@@ -27,6 +27,7 @@
         <module>audit-service</module>
         <module>specialroutes-service</module>
         <module>db-service</module>
+        <module>authentication-service</module>
 
     </modules>
     <build>
