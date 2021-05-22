@@ -1,9 +1,0 @@
-com\immoapp\gates\filters\TrackingFilter.class
-com\immoapp\gates\utils\UserContextInterceptor.class
-com\immoapp\gates\ZuulServerApplication.class
-com\immoapp\gates\filters\ResponseFilter.class
-com\immoapp\gates\utils\UserContextFilter.class
-com\immoapp\gates\utils\UserContext.class
-com\immoapp\gates\utils\UserContextHolder.class
-com\immoapp\gates\model\UserInfo.class
-com\immoapp\gates\filters\FilterUtils.class
